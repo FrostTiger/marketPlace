@@ -25,7 +25,7 @@ All team members consider deadlines.
 ###Website	
 Marketplace.com
 ###Application Logo
-![](/01-documents/01-proposal/images/logo.png)
+![](images/logo.png)
 ###Timeframe 
 - Proposals : 16.02.2017  
 - Initial sketches/wireframes : 26.02.2017  

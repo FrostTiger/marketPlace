@@ -1,4 +1,16 @@
-h1 Market Place
-//button(ng-click="popoverVisible=!popoverVisible" outer-click="popoverVisible=false" outer-click-exclude="popover") Threads
-    span(ng-if="$ctrl.count") &nbsp;({{ $ctrl.count }})
-//threads-popover(id="popover" ng-class="{visible: popoverVisible}" ng-if="popoverVisible")
+table
+    tr 
+        td 
+            img(src="/static/logo.png")
+        td 
+            h1 Market Place
+        td
+            input(type="text", name="search", placeholder="Lüften aramak istediğiniz kelimeyi yazınız...")
+        td
+            img(src="/static/search.png")
+        td
+            p Hoşgeldin User
+            p Profilim, Çıkış
+        td
+            img(src="/static/user.png")
+

@@ -1,32 +1,25 @@
 menu {
     position: relative;
-    height: 60px;
-    background: grey;
+    height: 90px;
+    background: lightgrey;
     color:darkslategrey;
     padding: 10px;
-    line-height: 40px;
+    
 }
 
 menu h1 {
-    font-weight: 300;
+    font-weight: 100;
     display: inline;
 }
 
-menu button {
-    background: none;
-    color: #fff;
-    float: right;
-    height: 40px;
-    line-height: 29px;
-    cursor: pointer;
-    outline: none;
-    border-radius: 5px;
-    border: 1px solid #fff;
+img{
+    height: 64px;
+    margin: 0px 20px 0px 0px;
+    
+}
+input{
+    width: 400px;
+    margin: 0px 10px 0px 60px;
+    padding: 12px;
 }
 
-menu button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-menu button:active {
-    background-color: rgba(255, 255, 255, 0.3);
-}

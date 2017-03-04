@@ -1,8 +1,8 @@
 menu {
     position: relative;
     height: 60px;
-    background: #3a5795;
-    color: white;
+    background: grey;
+    color:darkslategrey;
     padding: 10px;
     line-height: 40px;
 }

@@ -1,16 +1,22 @@
-table
-    tr 
-        td 
-            img(src="/static/logo.png")
-        td 
-            h1 Market Place
-        td
-            input(type="text", name="search", placeholder="Lüften aramak istediğiniz kelimeyi yazınız...")
-        td
-            img(src="/static/search.png")
-        td
-            p Hoşgeldin User
-            p Profilim, Çıkış
-        td
-            img(src="/static/user.png")
-
+div(class='.logoandname')
+    table
+        tr
+            td
+                 img(src='/static/logo.png')
+            td
+                 h1 Market Place
+div(class='.search')
+    table
+        tr
+            td
+                input(type="text", name="search", placeholder="Aradığınız kelimeyi buraya yazınız...")
+            td
+                img(src='/static/search.png')
+div(class='.user')
+    table
+        tr
+            td
+                p Hoşgeldin, User
+                p Profilim, Çıkış
+            td
+                img(src='/static/user.png')

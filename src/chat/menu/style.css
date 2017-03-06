@@ -1,9 +1,11 @@
 menu {
+    display: flex;
     position: relative;
     height: 90px;
     background: lightgrey;
     color:darkslategrey;
     padding: 10px;
+    top: 0px;
     
 }
 
@@ -18,8 +20,25 @@ img{
     
 }
 input{
-    width: 400px;
+    width: 550px;
     margin: 0px 10px 0px 60px;
     padding: 12px;
+}
+.logoandname{
+    height: 70px;
+    width: 300px;
+    background-color: yellowgreen;
+}
+menu table, tr, td {
+    border:  0px solid black;
+}
+.search{
+    height: 70px;
+    width: 300px;
+
+}
+user{
+    height: 70px;
+    width: 400px;
 }
 

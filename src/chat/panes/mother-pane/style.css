@@ -1,7 +1,6 @@
 mother-pane {
     position: absolute;
     top: 90px;
-    background: lightgray;
     width: 200px;
     bottom: 0;
 }
@@ -15,11 +14,14 @@ mother-pane chat-pane {
     left: 280px;
     border-left: 1px solid #ccc;
 }
-mother-pane p {
-    background-color: darkgrey;
-    padding: 10px;
-    margin: 1px;
-}
-mother-pane p:hover{
-    background-color: dimgrey;
+
+mother-pane left-menu {
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    width: 280px;
+    left: 0px;
+    border-left: 1px solid #ccc;
+    background-color: lightgrey;
 }

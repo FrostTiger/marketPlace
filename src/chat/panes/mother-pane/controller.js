@@ -1,13 +1,7 @@
 module.exports = class MotherPaneController {
-    constructor(ChatService) {
-        this.chatService = ChatService;
+    constructor() {
+        console.log("mother Pane");
     }
 
-    setActiveThread(thread) {
-        this.chatService.setActiveThread(thread);
-    }
 
-    getActiveThread() {
-        return this.chatService.activeThread;
-    }
 }

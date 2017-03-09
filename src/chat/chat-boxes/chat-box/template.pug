@@ -1,8 +1,11 @@
-header(click-container, click-container-cb="chatbox.clickContainerCb")
-    img(ng-src="{{ chatbox.threadData.user.picture.thumbnail }}")
-    strong(ng-bind="chatbox.threadData.user.getFullName()")
-    close(ng-click="chatbox.close()") ✖
-    minimize(ng-click="chatbox.toggle()")
+div(class='shoppingCard')
+    header
+        h6 Alışveriş listesi
 
-content
-    chat-pane(thread="chatbox.threadData")
+div(class='shoppingCard')
+    header
+        h6 Alışveriş listesi
+        
+div(class='shoppingCard')
+    header
+        h6 Alışveriş listesi

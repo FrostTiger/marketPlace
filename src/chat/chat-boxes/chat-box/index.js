@@ -5,8 +5,8 @@ angular
     .component('chatBox', {
         templateUrl: 'chat/chat-boxes/chat-box/template.html',
         controller: controller,
-        controllerAs: 'chatbox',
         bindings: {
-            threadData: '='
+            thread: '=',
+            user: '='
         }
     });

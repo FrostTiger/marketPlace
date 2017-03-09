@@ -1,5 +1,5 @@
 //require('./chat-boxes/chat-boxes-container');
-//require('./chat-boxes/chat-box');
+require('./chat-boxes/chat-box');
 require('./menu');
 require('./panes/chat-pane');
 require('./panes/left-menu');

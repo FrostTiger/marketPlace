@@ -1,8 +1,18 @@
 chat-pane {
-    display: block;
     position: absolute;
     height: 100%;
     top: 0px;
     width: 100%;
     left: 0;
+}
+
+chat-pane chat-box{
+    display: flex;
+    display:-webkit-flex;
+    position: absolute;
+    height: 100%;
+    top: 5px;
+    width: 916px;
+    left: 0px;
+    background-color: floralwhite;
 }

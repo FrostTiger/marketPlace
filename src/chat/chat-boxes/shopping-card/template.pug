@@ -1,0 +1,11 @@
+header
+    h4 Alışveriş listesi
+body
+    form
+       div.checkf(ng-repeat="item in $ctrl.items")
+            label.checkbox-inline
+                input(id="fr", type='checkbox', name='gokhan')
+                | {{item}}
+        
+        
+

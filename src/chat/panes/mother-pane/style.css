@@ -6,7 +6,7 @@ mother-pane {
 }
 
 mother-pane chat-pane {
-    display: block;
+    display: -webkit-inline-box;
     position: absolute;
     height: 100%;
     top: 0;

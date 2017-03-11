@@ -36,5 +36,29 @@ label{
     line-height: 1.3em;
 
 }
-.checkf{
+
+.additem{
+    display: inline-table;
+    top: 0;
+    float: left;
+    height: 45px;
+}
+
+.additem input[type="text"]{
+    z-index: 1;
+    width: 140px;
+    margin-bottom: 3px;
+
+}
+.button{
+    display: inline;
+    margin: 5px;
+    background-color: dimgrey;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.button:hover { 
+    background: #aaa;
+    cursor: pointer;
 }

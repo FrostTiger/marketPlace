@@ -2,7 +2,10 @@ header
     h4 Alışveriş listesi
 body
     form
-       div.checkf(ng-repeat="item in $ctrl.items")
+        div.additem
+            input(type="text", ng-model="item1", placeholder="...")
+            div.button(ng-click="$ctrl.addItem(item1)") Ekle
+        div.checkf(ng-repeat="item in $ctrl.items")
             label.checkbox-inline
                 input(id="fr", type='checkbox', name='gokhan')
                 | {{item}}

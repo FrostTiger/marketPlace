@@ -7,8 +7,8 @@ body
             div.button(ng-click="$ctrl.addItem(item1)") Ekle
         div.sumlist
             div.checkf(ng-repeat="item in $ctrl.items")
-                label.checkbox-inline
-                    input(id="fr", type='checkbox', name='gokhan')
+                label.checkbox-inline(ng-class="{'hideItem': visible}")
+                    input(id="fr", type='checkbox', name='gokhan' ng-model="visible")
                     | {{item}}
         
         

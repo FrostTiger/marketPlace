@@ -75,3 +75,7 @@ label{
     width: 190px;
 }
 
+.hideItem {
+  text-decoration: line-through;
+  color: lightslategrey;
+}

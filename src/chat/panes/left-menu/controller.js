@@ -3,5 +3,8 @@ module.exports = class LeftMenuController {
         console.log("leftmenu message");
         
     }
-
+    setItem(item) {
+        console.log(item);
+        
+    }
 }

@@ -11,7 +11,7 @@ div(class='.search')
             td
                 input(type="text", name="search", placeholder="Aradığınız kelimeyi buraya yazınız...")
             td
-                img(src='/static/search.png')
+                img(src='/static/search.png' ng-click="$ctrl.setItem('click')")
 div(class='.user')
     table
         tr

@@ -17,7 +17,11 @@ menu h1 {
 img{
     height: 64px;
     margin: 0px 20px 0px 0px;
-    
+     
+}
+img:hover {
+    background:#aaa;
+    cursor: pointer;
 }
 menu input{
     width: 550px;

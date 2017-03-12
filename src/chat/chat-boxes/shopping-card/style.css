@@ -17,11 +17,15 @@ shopping-card h4{
 }
 
 form{
+    position: relative;
     text-align: left;
     margin:5px;
     font-size: 12px;
+    min-height: 40px;
+    display: block;
 
 }
+
 
 .checkf input{
     float:left;
@@ -62,3 +66,12 @@ label{
     background: #aaa;
     cursor: pointer;
 }
+.sumlist{
+    overflow-y: scroll;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: 160px;
+    width: 190px;
+}
+

@@ -7,9 +7,9 @@
 .button1  {
     background: #999;
     color:#fff;
-    margin: 3px;
-    padding: 3px;
-    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .button1:hover {
@@ -22,23 +22,18 @@ left-menu {
     position:absolute;
     height: 100%;
     width: 280px;
-    height: :250px;
-    top: 0;
-    height: 100%;
-    
-   
 
 }
 
 left-menu p {
- background-color: darkgrey;
-   padding: 20px;
- margin: 1px;
+    background-color: darkgrey;
+    padding: 20px;
+    margin: 5px;
     color: black;
-width: 280px;
+    width: 280px;
     position: absolute;
-     top: 0;
-height: 100%;
+    top: 0;
+    height: 100%;
 }
 left-menu p:hover {
     background-color: dimgrey;

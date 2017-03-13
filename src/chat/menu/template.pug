@@ -1,22 +1,11 @@
-div(class='.logoandname')
-    table
-        tr
-            td
-                 img(src='/static/logo.png')
-            td
-                 h1 Market Place
-div(class='.search')
-    table
-        tr
-            td
-                input(type="text", name="search", placeholder="Aradığınız kelimeyi buraya yazınız...")
-            td
-                img(src='/static/search.png' ng-click="$ctrl.setItem('click')")
-div(class='.user')
-    table
-        tr
-            td
-                p Hoşgeldin, User
-                p Profilim, Çıkış
-            td
-                img(src='/static/user.png')
+div(class='logoandname')
+    img(src='/static/logo.png')
+    h1 Market Place
+div(class='search')
+    input(type="text", name="search", placeholder="Aradığınız kelimeyi buraya yazınız...")
+    img(src='/static/search.png' ng-click="$ctrl.setItem('click')")
+div(class='user')
+    p Hoşgeldin, User
+    p Profilim, Çıkış
+div(class='userimg')
+    img(src='/static/user.png')

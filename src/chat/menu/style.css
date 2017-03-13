@@ -1,48 +1,76 @@
 menu {
-    display: flex;
     position: relative;
     height: 90px;
     background: lightgrey;
     color:darkslategrey;
-    padding: 10px;
-    top: 0px;
-    
+    top: 0px;  
 }
 
-menu h1 {
-    font-weight: 100;
-    display: inline;
-}
 
 img{
     height: 64px;
-    margin: 0px 20px 0px 0px;
-     
 }
-img:hover {
-    background:#aaa;
-    cursor: pointer;
-}
-menu input{
-    width: 550px;
-    margin: 0px 10px 0px 60px;
-    padding: 12px;
-}
+
 .logoandname{
-    height: 70px;
-    width: 350px;
-    background-color: yellowgreen;
+    display: inline-flex;
+    position: absolute;
+    height: 80px;
+    width:30%;
+   
+    left: 0px;
+    top: 5px;
+    
 }
-menu table, tr, td {
-    border:  0px solid black;
+.logoandname h1{
+    margin-left:10px;
+}
+
+
+.logoandname img{
+    margin-top:5px;
+    margin-left: 5px;
 }
 .search{
-    height: 70px;
-    width: 300px;
+     display: inline-flex;
+     position:absolute;
+    height: 80px;
+    width:50%;
+    top: 5px;
+    left: 30%;
+        
+}
+.search input{
+     
+     height: 40px;
+     width:70%;
+     top:22;
 
+}
+.search img{
+    margin-top:7px;
+    margin-left: 10px;
+}
+.search img:hover{
+    cursor: pointer;
 }
 .user{
-    height: 70px;
-    width: 400px;
+    display: inline-block;
+    position: absolute;
+    height: 80px;
+    width:10%;
+    top: 5px;
+    left:80%;
 }
 
+.userimg{
+    display: inline-flex;
+    position: absolute;
+    height: 80px;
+    width:10%;
+    top: 5px;
+    left:90%; 
+}
+.userimg img{
+    margin-top:7px;
+    margin-left: 10px;
+}

@@ -130,6 +130,7 @@ class ChatService extends EventEmitter {
         return this._threads.find(thread => thread.id === id);
     };
 
+
 }
 
 angular.module('chat-app').service('ChatService', ChatService);

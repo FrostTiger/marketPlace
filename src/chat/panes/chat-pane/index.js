@@ -7,6 +7,7 @@ angular
         controller: controller,
         bindings: {
             thread: '=',
-            user: '='
+            user: '=',
+            card: '='
         }
     });

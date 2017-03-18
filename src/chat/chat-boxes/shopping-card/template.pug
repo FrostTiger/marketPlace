@@ -1,12 +1,12 @@
 header
-    h4 Alışveriş listesi
+    h4 {{ $ctrl.card.name }}
 body
     form
         div.additem <br/>
             input(type="text", ng-model="item1", placeholder="...")
             div.button(ng-click="$ctrl.addItem(item1)") Ekle
         div.sumlist
-            div.checkf(ng-repeat="item in $ctrl.items")
+            div.checkf(ng-repeat="item in $ctrl.card.items")
                 label.checkbox-inline(ng-class="{'hideItem': visible}")
                     input(id="fr", type='checkbox', name='gokhan' ng-model="visible")
                     | {{item}}

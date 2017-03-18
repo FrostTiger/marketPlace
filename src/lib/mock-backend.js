@@ -1,4 +1,4 @@
-
+var Card = require('../chat/user/card');
 var threads = [
     {
         user: {
@@ -1005,6 +1005,37 @@ var owner = {
         state: "alpes-maritimes",
         zip: 98343
     },
+    cards:[new Card('17.03.2017',[['Yumurta',true],
+            ['Ekmek',false],
+            ['Biber',true],
+            ['Salatalık',false],
+            ['Süt',false],
+            ['Domates',false]],
+            false),
+        new Card('14.03.2017',[['Erik',true],
+            ['Çay',false],
+            ['Mantar',true],
+            ['Yumurta',false],
+            ['Ekmek',false],
+            ['Maden suyu',false]],
+            false),
+        new Card('10.02.2017',[['Fındık',true],
+            ['Salça',false],
+            ['Şampuan',true],
+            ['Kaşar',false],
+            ['Deterjan',false],
+            ['Et',false],
+            ['Yumuşatıcı',true]],
+            false),
+        new Card('01.01.2017',[['Diş fırçası',true],
+            ['Makarna',false],
+            ['Kaşar',false],
+            ['Sucuk',false],
+            ['Ekmek',true],
+            ['Karanfil',false],
+            ['Bardak',false]],
+            false),
+        ],
     email: "ana.garnier@example.com",
     username: "reddog185",
     password: "secure",

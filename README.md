@@ -8,7 +8,7 @@ Origin	Personal requirements and observation.
 People who want to prepare a shopping list.
 ### Partners
 Kübra Gizem Biçer , Ezgi Çatalbaş , Gökhan Şaman , Uğur Bayazıdoğlu
-###Duration
+### Duration
 7 weeks.
 ### Theme
 Calculate approximately cost according to Shopping List.
@@ -18,7 +18,7 @@ Using this application , one or more user can add product to shopping list or up
 We need to fully discuss design steps of  Shopping_List_Project and  team should share tasks.
 ### Time Factors	
 Deadline  of project is 26 March so we have to study hard.
-###Related Projects	
+### Related Projects	
 There are similar applications on web and App. Store.
 ### Project Risks:	
 All team members consider deadlines.

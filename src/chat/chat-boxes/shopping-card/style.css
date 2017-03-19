@@ -100,7 +100,7 @@ label{
     position: absolute;
     top: 50px;
     left: 0;
-    height: 150px;
+    height: 130px;
     width: 190px;
 }
 
@@ -112,7 +112,7 @@ form .userinfo{
     background-color: grey;
     display:block;
     position: absolute;
-    top: 210px;
+    top: 190px;
     height: 30px;
     width: 140px;
     padding: 5px;
@@ -124,7 +124,7 @@ form .archivebutton{
     background-color: dimgrey;
     display:block;
     position: absolute;
-    top: 210px;
+    top: 190px;
     height: 30px;
     width: 50px;
     padding: 5px;
@@ -136,4 +136,11 @@ form .archivebutton{
 form .archivebutton:hover{
     background: #aaa;
     cursor: pointer;
+}
+
+form .hideWithCheckbox{
+    display:block;
+    position: absolute;
+    top: 225px;
+    left:6px;
 }

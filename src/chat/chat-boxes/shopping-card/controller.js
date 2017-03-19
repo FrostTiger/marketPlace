@@ -1,6 +1,10 @@
 module.exports = class ShoppingCardController {
-    constructor(CardService) {
+    constructor(CardService,ChatService) {
      this.cardService=CardService;
+     ChatService.owner.then(owner => {
+        this.owner = owner
+            console.log('owner değeri', this.owner.cards);
+        });
     }
     addItem(item) {
 
@@ -8,5 +12,8 @@ module.exports = class ShoppingCardController {
     }
     deleteCard(cardName){
         this.cardService.setDeleteCard(cardName);
+    }
+    archivedCard(cardName){
+        this.cardService.setarchivedCard(cardName);
     }
 }

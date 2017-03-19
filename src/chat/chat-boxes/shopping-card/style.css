@@ -100,11 +100,40 @@ label{
     position: absolute;
     top: 50px;
     left: 0;
-    height: 180px;
+    height: 150px;
     width: 190px;
 }
 
 .hideItem {
   text-decoration: line-through;
   color: lightslategrey;
+}
+form .userinfo{
+    background-color: grey;
+    display:block;
+    position: absolute;
+    top: 210px;
+    height: 30px;
+    width: 140px;
+    padding: 5px;
+    padding-top: 7px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+form .archivebutton{
+    background-color: dimgrey;
+    display:block;
+    position: absolute;
+    top: 210px;
+    height: 30px;
+    width: 50px;
+    padding: 5px;
+    padding-top: 7px;
+    left:140px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+form .archivebutton:hover{
+    background: #aaa;
+    cursor: pointer;
 }

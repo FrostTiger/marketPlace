@@ -11,13 +11,42 @@ header{
     background-color: darkgrey;
     
 }
-shopping-card h4{
+
+header .topleft{
+    top: 10px;
+    height: 35px;
+    position: absolute;
     text-align: center;
     padding: 10px;
+    width: 170px;
+    background-color: dimgrey;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
+header .topright {
+    height: 35px;
+    top:10px;
+    left: 170px;
+    position: absolute;
+    float: right;
+    padding: 8px;
+    width: 30px;
+    background-color: dimgrey;
+    border-left: solid lightgrey;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+header .topright:hover {
+    background: #aaa;
+    cursor: pointer;
+
+}
+
+
 form{
-    position: relative;
+    top: 45px;
+    position: absolute;
     text-align: left;
     margin:5px;
     font-size: 12px;
@@ -45,7 +74,7 @@ label{
     display: inline-table;
     top: 0;
     float: left;
-    height: 45px;
+    height: 60px;
 }
 
 .additem input[type="text"]{
@@ -71,7 +100,7 @@ label{
     position: absolute;
     top: 50px;
     left: 0;
-    height: 160px;
+    height: 180px;
     width: 190px;
 }
 

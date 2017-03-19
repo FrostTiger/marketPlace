@@ -7,5 +7,6 @@ angular
         controller: controller,
         bindings: {
             card:'='
+            
         }
     });

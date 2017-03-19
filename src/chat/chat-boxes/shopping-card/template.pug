@@ -1,5 +1,6 @@
 header
-    h4 {{ $ctrl.card.name }}
+   div.topleft {{ $ctrl.card.name }}
+   div.topright(ng-click="$ctrl.deleteCard($ctrl.card.name)") X
 body
     form
         div.additem <br/>

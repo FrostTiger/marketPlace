@@ -6,7 +6,7 @@ class ShoppingCard {
         //this.user=new User(thread.user);
     };
 
-   
+
     
 }
 

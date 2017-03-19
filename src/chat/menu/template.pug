@@ -5,7 +5,7 @@ div(class='search')
     input(type="text", name="search", placeholder="Aradığınız kelimeyi buraya yazınız...")
     img(src='/static/search.png' ng-click="$ctrl.setItem('click')")
 div(class='user')
-    p Hoşgeldin, User
+    p Hoşgeldin, {{$ctrl.owner.username}}
     p Profilim, Çıkış
 div(class='userimg')
-    img(src='/static/user.png')
+    img(src="{{$ctrl.owner.picture.large}}")

@@ -58,7 +58,7 @@ img{
     position: absolute;
     height: 80px;
     width:10%;
-    top: 5px;
+    top: 0px;
     left:80%;
 }
 
@@ -73,4 +73,5 @@ img{
 .userimg img{
     margin-top:7px;
     margin-left: 10px;
+    border-radius:10px;
 }

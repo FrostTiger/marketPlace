@@ -1,10 +1,13 @@
 module.exports = class LeftMenuController {
-    constructor() {
+    constructor(CardService) {
+        this.cardService=CardService;
         console.log("leftmenu message");
         
     }
     setItem(item) {
-        console.log(item);
+        if(item=="Uptodate")
+            this.cardService.setArchiveScreen(false);
+
         
     }
 }

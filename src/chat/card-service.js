@@ -35,6 +35,11 @@ class CardService extends EventEmitter {
     }
     setArchiveScreen(content){
         this.archiveScreen=content;
+        
+            this.trigger('UptodateScreen');
+        
+            this.trigger('ArchiveScreen');
+        
     }
 }
 

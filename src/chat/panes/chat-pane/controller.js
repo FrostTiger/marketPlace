@@ -4,7 +4,12 @@ module.exports = class ChatPaneController {
     ChatService.owner.then(owner =>{ this.owner = owner
         console.log('owner değeri',this.owner.cards);    
     });
-        
+       CardService.bind('UptodateScreen',() =>{
+        this.setArchiveScreen=CardService.archiveScreen;
+    }) 
+     CardService.bind('ArchiveScreen',() =>{
+        this.setArchiveScreen=CardService.archiveScreen;
+        }) 
     }
 
 }

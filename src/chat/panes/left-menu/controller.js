@@ -7,7 +7,8 @@ module.exports = class LeftMenuController {
     setItem(item) {
         if(item=="Uptodate")
             this.cardService.setArchiveScreen(false);
-
+        if(item=="Arsiv")
+            this.cardService.setArchiveScreen(true);
         
     }
 }

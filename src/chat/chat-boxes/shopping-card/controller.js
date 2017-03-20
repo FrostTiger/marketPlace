@@ -6,6 +6,9 @@ module.exports = class ShoppingCardController {
         this.owner = owner
             console.log('owner değeri', this.owner.cards);
         });
+        CardService.bind('ArchiveScreen',() =>{
+        this.setArchiveScreen=CardService.archiveScreen;
+        }) 
     }
     addItem(item) {
 

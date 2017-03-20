@@ -1061,7 +1061,7 @@ var owner = {
             ['Ekmek', true],
             ['Karanfil', false],
             ['Bardak', false]],
-            false),
+            true),
         ],
     email: "ana.garnier@example.com",
     username: "reddog",

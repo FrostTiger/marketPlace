@@ -1,6 +1,7 @@
 module.exports = class ShoppingCardController {
     constructor(CardService,ChatService) {
      this.cardService=CardService;
+     this.setArchiveScreen=CardService.archivedCard;
      ChatService.owner.then(owner => {
         this.owner = owner
             console.log('owner değeri', this.owner.cards);

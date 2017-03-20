@@ -8,6 +8,7 @@ class CardService extends EventEmitter {
             console.log('owner değeri', this.owner.cards);
         });
         window.cs = this;
+        this.archiveScreen=false;
         this.content = 'Delete';
     }
     getOwnerUserName(){
@@ -31,6 +32,9 @@ class CardService extends EventEmitter {
             }
         }
         console.log('new archived card', this.owner.cards);
+    }
+    setArchiveScreen(content){
+        this.archiveScreen=content;
     }
 }
 

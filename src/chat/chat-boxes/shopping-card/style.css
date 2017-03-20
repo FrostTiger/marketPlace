@@ -108,7 +108,7 @@ label{
   text-decoration: line-through;
   color: lightslategrey;
 }
-form .userinfo{
+.userinfo{
     background-color: grey;
     display:block;
     position: absolute;
@@ -120,7 +120,7 @@ form .userinfo{
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
 }
-form .archivebutton{
+.archivebutton{
     background-color: dimgrey;
     display:block;
     position: absolute;
@@ -133,7 +133,7 @@ form .archivebutton{
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 }
-form .archivebutton:hover{
+.archivebutton:hover{
     background: #aaa;
     cursor: pointer;
 }

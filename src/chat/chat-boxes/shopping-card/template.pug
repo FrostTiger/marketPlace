@@ -15,6 +15,9 @@ body
         div.hideArchive(ng-if="!$ctrl.card.isArchived")
             div.userinfo Kullanıcı: {{ $ctrl.owner.username }}
             div.archivebutton(ng-click="$ctrl.archivedCard($ctrl.card.name)") Arşivle
+        div.hideArchive(ng-if="$ctrl.card.isArchived")
+            div.userinfo Kullanıcı: {{ $ctrl.owner.username }}
+            div.archivebutton(ng-click="$ctrl.sentBackCard($ctrl.card.name)") Geri Al
         div.hideWithCheckbox
             label.checkbox-inline
                 input(id="fr2", type='checkbox', name='itemhide' ng-model="hide")

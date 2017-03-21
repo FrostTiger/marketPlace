@@ -23,4 +23,7 @@ module.exports = class ShoppingCardController {
     removeItem(index) {
         this.card.items.splice(index, 1);
     }
+    sentBackCard(cardName){
+        this.cardService.setSentBackCard(cardName);
+    }
 }

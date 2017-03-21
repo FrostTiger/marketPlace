@@ -5,16 +5,16 @@ class CardService extends EventEmitter {
     constructor(ChatService) {
         super();
         ChatService.owner.then(owner => {
-        this.owner = owner
+            this.owner = owner
             console.log('owner değeri', this.owner.cards);
         });
         window.cs = this;
         //Activate uptodate list or archivelist
         // true - Archive List false - Uptodate list
-        this.archiveScreen=false;
+        this.archiveScreen = false;
         this.content = 'Delete';
     }
-    getOwnerUserName(){
+    getOwnerUserName() {
         return this.owner.username;
     }
 
@@ -31,30 +31,35 @@ class CardService extends EventEmitter {
         this.content = newContent;
         for (var i = this.owner.cards.length; i--;) {
             if (this.owner.cards[i].name === this.content) {
-                this.owner.cards[i].isArchived=true;
+                this.owner.cards[i].isArchived = true;
             }
         }
         console.log('new archived card', this.owner.cards);
     }
-    setArchiveScreen(content){
-        this.archiveScreen=content;
-        
-            this.trigger('UptodateScreen');
-        
-            this.trigger('ArchiveScreen');
-        
+    setArchiveScreen(content) {
+        this.archiveScreen = content;
+        this.trigger('UptodateScreen');
     }
-    createNewShoppingCard(){
+    createNewShoppingCard() {
         var today = new Date();
-        var day=today.getDate();
-        if(day<10)
-            day="0"+day;        
-        var month=today.getMonth()+1;
-        if(month<10)
-            month="0"+month;
-        var year=today.getFullYear();
-        var strDate=day+"."+month+"."+year;
-        this.owner.cards.push(new Card(strDate,[],false));
+        var day = today.getDate();
+        if (day < 10)
+            day = "0" + day;
+        var month = today.getMonth() + 1;
+        if (month < 10)
+            month = "0" + month;
+        var year = today.getFullYear();
+        var strDate = day + "." + month + "." + year+"-"+(this.owner.cards.length+1);
+        this.owner.cards.push(new Card(strDate, [], false));
+    }
+    setSentBackCard(newContent) {
+        this.content = newContent;
+        for (var i = this.owner.cards.length; i--;) {
+            if (this.owner.cards[i].name === this.content) {
+                this.owner.cards[i].isArchived = false;
+            }
+        }
+
     }
 }
 

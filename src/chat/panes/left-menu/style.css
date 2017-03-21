@@ -38,3 +38,9 @@ left-menu p {
 left-menu p:hover {
     background-color: dimgrey;
 }
+.archiveScreen{
+    background-color: darkorange;
+}
+.archiveScreen:hover{
+    background-color: orange;
+}

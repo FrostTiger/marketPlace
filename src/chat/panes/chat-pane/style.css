@@ -1,6 +1,6 @@
 chat-pane {
-    display:inline;
     position: absolute;
     top: 0px;
     left: 0;
+    overflow: scroll;
 }

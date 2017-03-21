@@ -1,4 +1,5 @@
 var EventEmitter = require('../lib/event-emitter');
+var Card = require('../chat/user/card');
 
 class CardService extends EventEmitter {
     constructor(ChatService) {
@@ -42,6 +43,18 @@ class CardService extends EventEmitter {
         
             this.trigger('ArchiveScreen');
         
+    }
+    createNewShoppingCard(){
+        var today = new Date();
+        var day=today.getDate();
+        if(day<10)
+            day="0"+day;        
+        var month=today.getMonth()+1;
+        if(month<10)
+            month="0"+month;
+        var year=today.getFullYear();
+        var strDate=day+"."+month+"."+year;
+        this.owner.cards.push(new Card(strDate,[],false));
     }
 }
 

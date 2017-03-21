@@ -9,6 +9,7 @@ module.exports = class LeftMenuController {
             this.cardService.setArchiveScreen(false);
         if(item=="Arsiv")
             this.cardService.setArchiveScreen(true);
-        
+        if(item=='Yeni_Alışveriş_Listesi')
+            this.cardService.createNewShoppingCard();
     }
 }

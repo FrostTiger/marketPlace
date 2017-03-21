@@ -20,4 +20,7 @@ module.exports = class ShoppingCardController {
     archivedCard(cardName){
         this.cardService.setarchivedCard(cardName);
     }
+    removeItem(index){
+        this.card.items.splice(index,1);
+    }
 }

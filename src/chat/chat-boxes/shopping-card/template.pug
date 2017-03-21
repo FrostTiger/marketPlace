@@ -11,6 +11,7 @@ body
                 label.checkbox-inline(ng-class="{'hideItem': item[1]}")
                     input(id="fr", type='checkbox', name='gokhan' ng-model="item[1]" ng-checked="item[1]")
                     | {{item[0]}}
+                span(ng-click="$ctrl.removeItem($index)") x
         div.hideArchive(ng-if="!$ctrl.card.isArchived")
             div.userinfo Kullanıcı: {{ $ctrl.owner.username }}
             div.archivebutton(ng-click="$ctrl.archivedCard($ctrl.card.name)") Arşivle

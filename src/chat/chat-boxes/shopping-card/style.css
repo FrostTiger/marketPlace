@@ -144,3 +144,17 @@ form .hideWithCheckbox{
     top: 225px;
     left:6px;
 }
+.checkf label{
+    width: 150px;
+    margin: 3px;
+    border-bottom:1px solid dimgrey; 
+}
+.checkf span{
+    border: 1px solid black;
+    padding: 2px;
+    border-radius: 100%;
+}
+.checkf span:hover{
+    cursor:pointer;
+    background: #aaa;
+}

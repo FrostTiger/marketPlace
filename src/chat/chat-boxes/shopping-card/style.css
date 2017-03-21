@@ -9,7 +9,6 @@ shopping-card {
 }
 header{
     background-color: darkgrey;
-    
 }
 
 header .topleft{
@@ -40,7 +39,6 @@ header .topright {
 header .topright:hover {
     background: #aaa;
     cursor: pointer;
-
 }
 
 
@@ -52,14 +50,12 @@ form{
     font-size: 12px;
     min-height: 40px;
     display: block;
-
 }
 
 
 .checkf input{
     float:left;
     margin-right: 0.4em;
-    
 }
 
 label{
@@ -150,9 +146,7 @@ form .hideWithCheckbox{
     border-bottom:1px solid dimgrey; 
 }
 .checkf span{
-    border: 1px solid black;
     padding: 2px;
-    border-radius: 100%;
 }
 .checkf span:hover{
     cursor:pointer;

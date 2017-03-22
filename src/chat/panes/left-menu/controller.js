@@ -2,7 +2,6 @@ module.exports = class LeftMenuController {
     constructor(CardService) {
         this.cardService = CardService;
         this.isArchived = this.cardService.archiveScreen;
-        console.log("leftmenu message");
         CardService.bind('UptodateScreen', () => {
             this.isArchived = CardService.archiveScreen;
         })
@@ -11,9 +10,9 @@ module.exports = class LeftMenuController {
     setItem(item) {
         if (item == "Uptodate")
             this.cardService.setArchiveScreen(false);
-        if (item == "Arsiv")
+        if (item == "Archive")
             this.cardService.setArchiveScreen(true);
-        if (item == 'Yeni_Alışveriş_Listesi')
+        if (item == 'newShoppingCard')
             this.cardService.createNewShoppingCard();
     }
 }

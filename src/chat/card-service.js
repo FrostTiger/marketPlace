@@ -6,11 +6,9 @@ class CardService extends EventEmitter {
         super();
         ChatService.owner.then(owner => {
             this.owner = owner
-            console.log('owner değeri', this.owner.cards);
         });
-        window.cs = this;
         //Activate uptodate list or archivelist
-        // true - Archive List false - Uptodate list
+        // true - Archive List / false - Uptodate list
         this.archiveScreen = false;
         this.content = 'Delete';
     }
@@ -25,8 +23,8 @@ class CardService extends EventEmitter {
                 this.owner.cards.splice(i, 1);
             }
         }
-        console.log('new delete', this.owner.cards);
     }
+
     setarchivedCard(newContent) {
         this.content = newContent;
         for (var i = this.owner.cards.length; i--;) {
@@ -34,12 +32,13 @@ class CardService extends EventEmitter {
                 this.owner.cards[i].isArchived = true;
             }
         }
-        console.log('new archived card', this.owner.cards);
     }
+
     setArchiveScreen(content) {
         this.archiveScreen = content;
         this.trigger('UptodateScreen');
     }
+
     createNewShoppingCard() {
         var today = new Date();
         var day = today.getDate();
@@ -49,9 +48,10 @@ class CardService extends EventEmitter {
         if (month < 10)
             month = "0" + month;
         var year = today.getFullYear();
-        var strDate = day + "." + month + "." + year+"-"+(this.owner.cards.length+1);
+        var strDate = day + "." + month + "." + year + "-" + (this.owner.cards.length + 1);
         this.owner.cards.push(new Card(strDate, [], false));
     }
+    
     setSentBackCard(newContent) {
         this.content = newContent;
         for (var i = this.owner.cards.length; i--;) {

@@ -1,26 +1,26 @@
 header
    div.topleft {{ $ctrl.card.name }}
-   div.topright(ng-click="$ctrl.deleteCard($ctrl.card.name)") X
+   div.topright(ng-click = "$ctrl.deleteCard($ctrl.card.name)") X
 body
     form
         div.additem <br/>
-            input(type="text", ng-model="item1", placeholder="...")
-            div.button(ng-click="$ctrl.addItem(item1)") Ekle
+            input(type = "text", ng-model = "item1", placeholder="...")
+            div.button(ng-click = "$ctrl.addItem(item1)") Ekle
         div.sumlist
-            div.checkf(ng-repeat="item in $ctrl.card.items" ng-if="!hide || !item[1]")
-                label.checkbox-inline(ng-class="{'hideItem': item[1]}")
-                    input(id="fr", type='checkbox', name='gokhan' ng-model="item[1]" ng-checked="item[1]")
+            div.checkf(ng-repeat = "item in $ctrl.card.items" ng-if = "!hide || !item[1]")
+                label.checkbox-inline(ng-class = "{'hideItem': item[1]}")
+                    input(id = "fr", type = 'checkbox', name = 'gokhan' ng-model = "item[1]" ng-checked = "item[1]")
                     | {{item[0]}}
-                span(ng-click="$ctrl.removeItem($index)") x
-        div.hideArchive(ng-if="!$ctrl.card.isArchived")
+                span(ng-click = "$ctrl.removeItem($index)") x
+        div.hideArchive(ng-if = "!$ctrl.card.isArchived")
             div.userinfo Kullanıcı: {{ $ctrl.owner.username }}
-            div.archivebutton(ng-click="$ctrl.archivedCard($ctrl.card.name)") Arşivle
-        div.hideArchive(ng-if="$ctrl.card.isArchived")
+            div.archivebutton(ng-click = "$ctrl.archivedCard($ctrl.card.name)") Arşivle
+        div.hideArchive(ng-if = "$ctrl.card.isArchived")
             div.userinfo Kullanıcı: {{ $ctrl.owner.username }}
-            div.archivebutton(ng-click="$ctrl.sentBackCard($ctrl.card.name)") Geri Al
+            div.archivebutton(ng-click = "$ctrl.sentBackCard($ctrl.card.name)") Geri Al
         div.hideWithCheckbox
             label.checkbox-inline
-                input(id="fr2", type='checkbox', name='itemhide' ng-model="hide")
+                input(id = "fr2", type = 'checkbox', name = 'itemhide' ng-model = "hide")
                 | Seçili itemleri gösterme
         
 

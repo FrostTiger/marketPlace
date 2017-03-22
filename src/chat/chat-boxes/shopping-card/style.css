@@ -7,9 +7,11 @@ shopping-card {
     border-radius: 10px;
     box-shadow: 3px 3px 4px dimgrey;
 }
+
 header{
     background-color: darkgrey;
 }
+
 
 header .topleft{
     top: 10px;
@@ -36,6 +38,7 @@ header .topright {
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 }
+
 header .topright:hover {
     background: #aaa;
     cursor: pointer;
@@ -51,7 +54,6 @@ form{
     min-height: 40px;
     display: block;
 }
-
 
 .checkf input{
     float:left;
@@ -77,8 +79,8 @@ label{
     z-index: 1;
     width: 140px;
     margin-bottom: 3px;
-
 }
+
 .button{
     display: inline;
     margin: 5px;
@@ -91,6 +93,7 @@ label{
     background: #aaa;
     cursor: pointer;
 }
+
 .sumlist{
     overflow-y: scroll;
     position: absolute;
@@ -104,6 +107,7 @@ label{
   text-decoration: line-through;
   color: lightslategrey;
 }
+
 .userinfo{
     background-color: grey;
     display:block;
@@ -116,6 +120,7 @@ label{
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
 }
+
 .archivebutton{
     background-color: dimgrey;
     display:block;
@@ -129,6 +134,7 @@ label{
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 }
+
 .archivebutton:hover{
     background: #aaa;
     cursor: pointer;
@@ -140,14 +146,17 @@ form .hideWithCheckbox{
     top: 225px;
     left:6px;
 }
+
 .checkf label{
     width: 150px;
     margin: 3px;
     border-bottom:1px solid dimgrey; 
 }
+
 .checkf span{
     padding: 2px;
 }
+
 .checkf span:hover{
     cursor:pointer;
     background: #aaa;

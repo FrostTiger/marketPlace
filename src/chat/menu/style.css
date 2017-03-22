@@ -2,10 +2,9 @@ menu {
     position: relative;
     height: 90px;
     background: lightgrey;
-    color:darkslategrey;
+    color:black;
     top: 0px;  
 }
-
 
 img{
     height: 64px;
@@ -16,43 +15,43 @@ img{
     position: absolute;
     height: 80px;
     width:30%;
-   
     left: 0px;
     top: 5px;
-    
 }
+
 .logoandname h1{
     margin-left:10px;
 }
-
 
 .logoandname img{
     margin-top:5px;
     margin-left: 5px;
 }
+
 .search{
      display: inline-flex;
      position:absolute;
     height: 80px;
     width:50%;
     top: 5px;
-    left: 30%;
-        
+    left: 30%;  
 }
+
 .search input{
-     
      height: 40px;
      width:70%;
      top:22;
-
 }
+
 .search img{
     margin-top:7px;
     margin-left: 10px;
 }
+
 .search img:hover{
     cursor: pointer;
 }
+
 .user{
     display: inline-block;
     position: absolute;
@@ -70,6 +69,7 @@ img{
     top: 5px;
     left:90%; 
 }
+
 .userimg img{
     margin-top:7px;
     margin-left: 10px;

@@ -4,7 +4,6 @@ module.exports = class ShoppingCardController {
         this.setArchiveScreen = CardService.archivedCard;
         ChatService.owner.then(owner => {
             this.owner = owner
-            console.log('owner değeri', this.owner.cards);
         });
         CardService.bind('ArchiveScreen', () => {
             this.setArchiveScreen = CardService.archiveScreen;

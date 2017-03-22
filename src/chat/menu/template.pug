@@ -2,8 +2,8 @@ div(class='logoandname')
     img(src='/static/logo.png')
     h1 Market Place
 div(class='search')
-    input(type="text", name="search", placeholder="Aradığınız kelimeyi buraya yazınız...")
-    img(src='/static/search.png' ng-click="$ctrl.setItem('click')")
+    input(type="text", ng-model="$ctrl.search", placeholder="Aradığınız kelimeyi buraya yazınız...")
+    img(src='/static/search.png' ng-click="$ctrl.setSearchItemScreen($ctrl.search)")
 div(class='user')
     p Hoşgeldin, {{$ctrl.owner.username}}
     p Profilim, Çıkış

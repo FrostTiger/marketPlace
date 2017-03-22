@@ -10,6 +10,8 @@ class CardService extends EventEmitter {
         //Activate uptodate list or archivelist
         // true - Archive List / false - Uptodate list
         this.archiveScreen = false;
+        this.searchScreen = false;
+        this.searchItem='';
         this.content = 'Delete';
     }
     getOwnerUserName() {
@@ -36,6 +38,16 @@ class CardService extends EventEmitter {
 
     setArchiveScreen(content) {
         this.archiveScreen = content;
+        this.searchScreen = false;
+        this.trigger('UptodateScreen');
+        this.trigger('SearchScreen');
+    }
+
+    setSearchScreen(content) {
+        this.searchItem=content;
+        this.searchScreen = true;
+        this.archiveScreen =false;
+        this.trigger('SearchScreen');
         this.trigger('UptodateScreen');
     }
 
@@ -51,7 +63,7 @@ class CardService extends EventEmitter {
         var strDate = day + "." + month + "." + year + "-" + (this.owner.cards.length + 1);
         this.owner.cards.push(new Card(strDate, [], false));
     }
-    
+
     setSentBackCard(newContent) {
         this.content = newContent;
         for (var i = this.owner.cards.length; i--;) {

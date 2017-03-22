@@ -1,2 +1,3 @@
-shopping-card(ng-repeat = "card in $ctrl.owner.cards" card = "card" ng-if = "!card.isArchived && !$ctrl.setArchiveScreen")
-shopping-card(ng-repeat = "card in $ctrl.owner.cards" card = "card" ng-if = "card.isArchived && $ctrl.setArchiveScreen")
+shopping-card(ng-repeat = "card in $ctrl.owner.cards" card = "card" ng-if = "!card.isArchived && !$ctrl.setArchiveScreen && !$ctrl.setSearchScreen")
+shopping-card(ng-repeat = "card in $ctrl.owner.cards" card = "card" ng-if = "card.isArchived && $ctrl.setArchiveScreen && !$ctrl.setSearchScreen")
+shopping-card(ng-repeat = "card in $ctrl.owner.cards" card = "card" ng-if = "$ctrl.setSearchScreen && card.name.includes($ctrl.setSearchItem)")

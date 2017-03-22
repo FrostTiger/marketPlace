@@ -158,6 +158,15 @@ form .hideWithCheckbox{
 }
 
 .checkf span:hover{
-    cursor:pointer;
+    cursor: pointer;
+    background: #aaa;
+}
+
+.clearInput{
+    padding: 2px;
+}
+
+.clearInput:hover{
+    cursor: pointer;
     background: #aaa;
 }

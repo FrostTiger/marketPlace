@@ -1,5 +1,5 @@
 module.exports = class ShoppingCardController {
-    constructor(CardService, ChatService) {
+    constructor(CardService, ChatService, $scope) {
         this.cardService = CardService;
         this.setArchiveScreen = CardService.archivedCard;
         ChatService.owner.then(owner => {
@@ -12,6 +12,7 @@ module.exports = class ShoppingCardController {
     addItem(item) {
 
         this.card.items.push([item, false]);
+        this.item1='';
     }
     deleteCard(cardName) {
         this.cardService.setDeleteCard(cardName);

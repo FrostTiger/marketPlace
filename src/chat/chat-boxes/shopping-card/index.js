@@ -6,7 +6,6 @@ angular
         templateUrl: 'chat/chat-boxes/shopping-card/template.html',
         controller: controller,
         bindings: {
-            card:'='
-            
+            card: '='
         }
     });

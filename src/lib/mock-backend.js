@@ -1005,7 +1005,7 @@ var owner = {
         state: "alpes-maritimes",
         zip: 98343
     },
-    cards:[new Card('17.03.2017-1',[
+    cards: [new Card('17.03.2017-1',[
             ['Yumurta', true],
             ['Ekmek', false],
             ['Biber', true],
@@ -1022,7 +1022,7 @@ var owner = {
             ['Süt', false],
             ['Domates', false]],
             false),
-        new Card('14.03.2017-2',[
+         new Card('14.03.2017-2',[
             ['Erik', true],
             ['Çay', false],
             ['Mantar', true],
@@ -1030,7 +1030,7 @@ var owner = {
             ['Ekmek', false],
             ['Maden suyu', false]],
             false),
-        new Card('10.02.2017-3',[
+         new Card('10.02.2017-3',[
             ['Fındık', true],
             ['Salça', false],
             ['Şampuan', true],
@@ -1039,7 +1039,7 @@ var owner = {
             ['Et', false],
             ['Yumuşatıcı', true]],
             false),
-        new Card('01.01.2017-4',[
+         new Card('01.01.2017-4',[
             ['Diş fırçası', true],
             ['Makarna', false],
             ['Kaşar', false],
@@ -1048,7 +1048,7 @@ var owner = {
             ['Karanfil', false],
             ['Bardak', false]],
             false),
-         new Card('20.02.2017-5',[
+          new Card('20.02.2017-5',[
             ['Diş fırçası', true],
             ['Makarna', false],
             ['Kaşar', false],
@@ -1057,7 +1057,7 @@ var owner = {
             ['Karanfil', false],
             ['Bardak', false]],
             false),
-        new Card('21.03.2017-6',[
+          new Card('21.03.2017-6',[
             ['Diş fırçası', true],
             ['Makarna', false],
             ['Kaşar', false],
@@ -1066,7 +1066,7 @@ var owner = {
             ['Karanfil', false],
             ['Bardak', false]],
             false),
-        new Card('12.03.2017-7',[
+          new Card('12.03.2017-7',[
             ['Diş fırçası', true],
             ['Makarna', false],
             ['Kaşar', false],
@@ -1075,7 +1075,7 @@ var owner = {
             ['Karanfil', false],
             ['Bardak', false]],
             false),
-        new Card('13.03.2017-8',[
+          new Card('13.03.2017-8',[
             ['Diş fırçası', true],
             ['Makarna', false],
             ['Kaşar', false],
@@ -1084,7 +1084,7 @@ var owner = {
             ['Karanfil', false],
             ['Bardak', false]],
             false),
-        new Card('14.03.2017-9',[
+          new Card('14.03.2017-9',[
             ['Diş fırçası', true],
             ['Makarna', false],
             ['Kaşar', false],
@@ -1093,7 +1093,7 @@ var owner = {
             ['Karanfil', false],
             ['Bardak', false]],
             false),
-        new Card('18.03.2017-10',[
+          new Card('18.03.2017-10',[
             ['Diş fırçası', true],
             ['Makarna', true],
             ['Kaşar', true],

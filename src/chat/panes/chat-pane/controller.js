@@ -6,7 +6,7 @@ module.exports = class ChatPaneController {
         ChatService.owner.then(owner => {
         this.owner = owner
         });
-        CardService.bind('UptodateScreen', () => {
+        CardService.bind('UpToDateScreen', () => {
             this.setArchiveScreen = CardService.archiveScreen;
         })
         CardService.bind('ArchiveScreen', () => {

@@ -9,6 +9,16 @@
     border-radius: 5px;
 }
 
+.buttonDelete  {
+    background: blueviolet;
+    color:#fff;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100px;
+    cursor:pointer;
+}
+
 .button1:hover {
     background: #aaa;
     cursor: pointer;
@@ -16,7 +26,7 @@
 
 left-menu {
     display: block;
-    position: absolute;
+    position:absolute;
     height: 100%;
     width: 280px;
 
@@ -43,5 +53,8 @@ left-menu p:hover {
     background-color: darkorange;
 }
 .archiveScreen:hover{
+    background-color: orange;
+}
+.recycleBin{
     background-color: orange;
 }

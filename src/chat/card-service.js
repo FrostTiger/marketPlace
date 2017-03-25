@@ -7,91 +7,79 @@ class CardService extends EventEmitter {
         ChatService.owner.then(owner => {
             this.owner = owner
         });
-
-        /**
-         * @description
-         * Activate UpToDate list or archivelist
-         * true - Archive List / false - UpToDate list
-         * 
-         * @author G. ŞAMAN
-         */
+        //Activate uptodate list or archivelist
+        // true - Archive List / false - Uptodate list
         this.archiveScreen = false;
-        /**
-         * @description
-         * Search screen is activated with set this.searchScreen variable to true
-         * default value is false
-         * 
-         * @author G.ŞAMAN
-         */
+        this.uptodateScreen = true;
         this.searchScreen = false;
+        this.recycleBinScreen = false;
+        this.userScreen = false;
+        this.profileScreen = false;
         this.searchItem = '';
         this.content = 'Delete';
     }
-    
     getOwnerUserName() {
         return this.owner.username;
     }
 
-    /**
-     * @description
-     * This function is used in controller of shopping-card and delete shopping card from card box of user.
-     * 
-     * @param {String} newContent 
-     */
     setDeleteCard(newContent) {
         this.content = newContent;
         for (var i = this.owner.cards.length; i--;) {
             if (this.owner.cards[i].name === this.content) {
+                //moving current card to deletedcards
+                this.owner.deletedcards.push(this.owner.cards[i]);
+                this.owner.cards[i].isDeleted = true;
                 this.owner.cards.splice(i, 1);
             }
         }
     }
 
-    /**
-     * @description
-     * Set status card Up to date card to archive.
-     * 
-     * @param {String} newContent 
-     */
     setarchivedCard(newContent) {
         this.content = newContent;
         for (var i = this.owner.cards.length; i--;) {
             if (this.owner.cards[i].name === this.content) {
                 this.owner.cards[i].isArchived = true;
+                this.owner.cards[i].isDeleted = false;
             }
         }
     }
 
-    /**
-     * @description
-     * Set screen Up to date card to archive.
-     * @param {String} content 
-     */
-    setArchiveScreen(content) {
-        this.archiveScreen = content;
+    setUptodateScreen() {
+        this.archiveScreen = false;
+        this.uptodateScreen = true;
         this.searchScreen = false;
-        this.trigger('UpToDateScreen');
+        this.recycleBinScreen = false;
+        this.userScreen = false;
+        this.profileScreen = false;
+        this.trigger('UptodateScreen');
         this.trigger('SearchScreen');
+        this.trigger('RecycleBin');
+        this.trigger('ArchiveScreen');
+        this.trigger('User');
     }
 
-    /**
-     * @description
-     * Set search screen is activated.
-     * 
-     * @param {String} content 
-     */
+    setArchiveScreen() {
+        this.archiveScreen = true;
+        this.uptodateScreen = false;
+        this.searchScreen = false;
+        this.recycleBinScreen = false;
+        this.userScreen = false;
+        this.profileScreen = false;
+        this.trigger('UptodateScreen');
+        this.trigger('SearchScreen');
+        this.trigger('RecycleBin');
+        this.trigger('ArchiveScreen');
+        this.trigger('User');
+    }
+
     setSearchScreen(content) {
-        this.searchItem=content;
+        this.searchItem = content;
         this.searchScreen = true;
-        this.archiveScreen =false;
+        this.archiveScreen = false;
+        this.recycleBinScreen = false;
         this.trigger('SearchScreen');
-        this.trigger('UpToDateScreen');
     }
 
-    /**
-     * @description
-     * Create new shopping card with using date function.
-     */
     createNewShoppingCard() {
         var today = new Date();
         var day = today.getDate();
@@ -105,12 +93,6 @@ class CardService extends EventEmitter {
         this.owner.cards.push(new Card(strDate, [], false));
     }
 
-    /**
-     * @description
-     * Restore shopping card from archive.
-     * 
-     * @param {String} newContent 
-     */
     setSentBackCard(newContent) {
         this.content = newContent;
         for (var i = this.owner.cards.length; i--;) {
@@ -118,7 +100,38 @@ class CardService extends EventEmitter {
                 this.owner.cards[i].isArchived = false;
             }
         }
+    }
 
+    setRecycleBinScreen() {
+        this.archiveScreen = false;
+        this.searchScreen = false;
+        this.recycleBinScreen = true;
+        this.userScreen = false;
+        this.profileScreen = false;
+        this.uptodateScreen = false;
+        this.trigger('UptodateScreen');
+        this.trigger('SearchScreen');
+        this.trigger('RecycleBin');
+        this.trigger('ArchiveScreen');
+        this.trigger('User');
+    }
+
+    setUserScreen() {
+        this.archiveScreen = false;
+        this.searchScreen = false;
+        this.recycleBinScreen = false;
+        this.userScreen = true;
+        this.profileScreen = false;
+        this.uptodateScreen = false;
+        this.trigger('UptodateScreen');
+        this.trigger('SearchScreen');
+        this.trigger('RecycleBin');
+        this.trigger('ArchiveScreen');
+        this.trigger('User');
+    }
+
+    searchResult(content) {
+        var te = this.owner.cards;
     }
 }
 

@@ -1,9 +1,9 @@
-shopping-card {
+user-box {
     margin:10px;
     display:inline-block;
-    height: 330px;
+    height: 300px;
     width: 200px;
-    background-color: lightgrey;
+    background-color: bisque;
     border-radius: 10px;
     box-shadow: 3px 3px 4px dimgrey;
 }
@@ -12,6 +12,25 @@ header{
     background-color: darkgrey;
 }
 
+.userHeader
+{
+    top: 10px;
+    height: 35px;
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    width: 95%;
+    background-color: darkorange;
+    border-radius: 20px;
+    margin-left: 5px;
+}
+
+.image{
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
 
 header .topleft{
     top: 10px;
@@ -73,6 +92,32 @@ label{
     top: 0;
     float: left;
     height: 60px;
+}
+
+.userSpan{
+    float: left;
+        margin-top: 138px;
+    margin-left: 3px;
+}
+
+.adduser{
+    margin-top:230px;
+    height: 60px;
+}
+
+.adduser input[type="text"]{
+    z-index: 1;
+    width: 95px;
+    margin-bottom: 3px;
+}
+
+.buttonUser{
+    display: inline;
+    background-color: aquamarine;
+    border-radius: 3px;
+    padding: 5px;
+    float:right;
+    cursor: pointer;
 }
 
 .additem input[type="text"]{
@@ -171,6 +216,4 @@ form .hideWithCheckbox{
     background: #aaa;
 }
 
-.hideArchive{
-    position: initial;
-}
+

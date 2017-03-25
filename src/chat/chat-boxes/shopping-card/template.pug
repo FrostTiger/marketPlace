@@ -14,10 +14,14 @@ body
                     | {{item[0]}}
                 span(ng-click = "$ctrl.removeItem($index)") x
         div.hideArchive(ng-if = "!$ctrl.card.isArchived")
-            div.userinfo Kullanıcı: {{ $ctrl.owner.username }}
+            div.userinfo Kullanıcı:
+            div.userpic
+                img(src = "{{$ctrl.owner.picture.large}}")
             div.archivebutton(ng-click = "$ctrl.archivedCard($ctrl.card.name)") Arşivle
         div.hideArchive(ng-if = "$ctrl.card.isArchived")
-            div.userinfo Kullanıcı: {{ $ctrl.owner.username }}
+            div.userinfo Kullanıcı:
+            div.userpic
+                img(src = "{{$ctrl.owner.picture.large}}")
             div.archivebutton(ng-click = "$ctrl.sentBackCard($ctrl.card.name)") Geri Al
         div.hideWithCheckbox
             label.checkbox-inline

@@ -114,11 +114,30 @@ label{
     position: absolute;
     top: 190px;
     height: 30px;
-    width: 140px;
+    width: 65px;
     padding: 5px;
     padding-top: 7px;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
+}
+.userpic{
+    background-color: grey;
+    display: block;
+    position: absolute;
+    top: 190px;
+    height: 30px;
+    width: 100px;
+    left: 65px;
+    padding: 5px;
+    padding-top: 7px;
+    
+}
+.userpic img{
+    left: -2px;
+    height: 24px;
+    width: 24px;
+    bottom: 4px;
+    border-radius: 3px;
 }
 
 .archivebutton{

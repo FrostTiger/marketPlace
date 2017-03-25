@@ -1,7 +1,7 @@
 shopping-card {
-    margin: 10px;
-    display: inline-block;
-    height: 300px;
+    margin:10px;
+    display:inline-block;
+    height: 330px;
     width: 200px;
     background-color: lightgrey;
     border-radius: 10px;
@@ -27,7 +27,7 @@ header .topleft{
 
 header .topright {
     height: 35px;
-    top: 10px;
+    top:10px;
     left: 170px;
     position: absolute;
     float: right;
@@ -49,14 +49,14 @@ form{
     top: 45px;
     position: absolute;
     text-align: left;
-    margin: 5px;
+    margin:5px;
     font-size: 12px;
     min-height: 40px;
     display: block;
 }
 
 .checkf input{
-    float: left;
+    float:left;
     margin-right: 0.4em;
 }
 
@@ -110,46 +110,27 @@ label{
 
 .userinfo{
     background-color: grey;
-    display: block;
+    display:block;
     position: absolute;
     top: 190px;
     height: 30px;
-    width: 65px;
+    width: 140px;
     padding: 5px;
     padding-top: 7px;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
 }
-.userpic{
-    background-color: grey;
-    display: block;
-    position: absolute;
-    top: 190px;
-    height: 30px;
-    width: 100px;
-    left: 65px;
-    padding: 5px;
-    padding-top: 7px;
-    
-}
-.userpic img{
-    left: -2px;
-    height: 24px;
-    width: 24px;
-    bottom: 4px;
-    border-radius: 3px;
-}
 
 .archivebutton{
     background-color: dimgrey;
-    display: block;
+    display:block;
     position: absolute;
     top: 190px;
     height: 30px;
     width: 50px;
     padding: 5px;
     padding-top: 7px;
-    left: 140px;
+    left:140px;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -160,7 +141,7 @@ label{
 }
 
 form .hideWithCheckbox{
-    display: block;
+    display:block;
     position: absolute;
     top: 225px;
     left:6px;
@@ -169,7 +150,7 @@ form .hideWithCheckbox{
 .checkf label{
     width: 150px;
     margin: 3px;
-    border-bottom: 1px solid dimgrey; 
+    border-bottom:1px solid dimgrey; 
 }
 
 .checkf span{
@@ -188,4 +169,8 @@ form .hideWithCheckbox{
 .clearInput:hover{
     cursor: pointer;
     background: #aaa;
+}
+
+.hideArchive{
+    position: initial;
 }

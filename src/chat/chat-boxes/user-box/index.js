@@ -6,7 +6,7 @@ angular
         templateUrl: 'chat/chat-boxes/user-box/template.html',
         controller: controller,
         bindings: {
-            user:'='
-            
+            user: '='
+
         }
     });

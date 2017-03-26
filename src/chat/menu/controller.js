@@ -2,7 +2,7 @@ module.exports = class MenuController {
     constructor(ChatService, CardService) {
         this.cardService = CardService;
         ChatService.owner.then(owner => {
-        this.owner = owner
+            this.owner = owner
         });
     }
     setSearchItemScreen(item) {

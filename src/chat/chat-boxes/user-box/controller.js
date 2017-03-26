@@ -8,7 +8,7 @@ module.exports = class UserBoxController {
         ChatService.threads.then(threads => {
             this.threads = threads;
         });
-        
+
     }
-    
+
 }

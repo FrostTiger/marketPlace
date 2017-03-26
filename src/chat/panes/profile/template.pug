@@ -1,0 +1,51 @@
+div(class='myProfile')
+    div
+        p.header 
+            span.title UserName:
+            span.value {{ $ctrl.owner.username}}
+    div
+        p.header 
+            span.title  Name: 
+            span.value {{$ctrl.owner.name.title}}
+            span.value {{$ctrl.owner.name.first}}
+    div
+        p.header 
+            span.title  LastName:
+            span.value {{$ctrl.owner.name.last}}
+    div
+        p.header 
+            span.title  Image 
+             img(src="{{$ctrl.owner.picture.large}}")
+    div
+        p.header 
+            span.title  Password
+            span.value {{$ctrl.owner.password}}
+    div
+        p.header 
+            span.title  Gender 
+            span.value {{$ctrl.owner.gender}}
+    div
+        p.header 
+            span.title  Phone 
+            span.value {{$ctrl.owner.phone}}
+    div
+        p.header 
+            span.title E-Mail 
+            span.value {{$ctrl.owner.email}}
+    div.address Address
+        div
+            p.header 
+                span.title  City 
+                span.value {{$ctrl.owner.location.city}}
+        div
+            p.header 
+                span.title  Street 
+                span.value {{$ctrl.owner.location.street}}
+        div
+            p.header 
+                span.title  State 
+                span.value {{$ctrl.owner.location.state}}
+        div
+            p.header 
+                span.title  Zip 
+                span.value {{$ctrl.owner.location.zip}}

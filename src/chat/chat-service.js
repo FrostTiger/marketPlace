@@ -36,7 +36,7 @@ class ChatService extends EventEmitter {
             threadDeferred.resolve(this._threads);
         };
 
-        var getThreads = function() {
+        var getThreads = function () {
             return ChatRepository.getThreads().then(onInitialData);
         };
 
@@ -59,7 +59,7 @@ class ChatService extends EventEmitter {
 
         var setupUpdates = () => {
             $timeout(() => {
-                ChatRepository.getUpdates().then(function(response) {
+                ChatRepository.getUpdates().then(function (response) {
                     var updates = response.data;
 
                     onUpdate(updates);
@@ -70,7 +70,7 @@ class ChatService extends EventEmitter {
         var ownerDeferred = $q.defer();
 
         this.owner = ownerDeferred.promise;
-        ChatRepository.getOwner().then(function(response) {
+        ChatRepository.getOwner().then(function (response) {
             ownerDeferred.resolve(response.data);
         });
 

@@ -4,7 +4,7 @@ header
 body
     form
         div.additem <br/>
-            input(type = "text", ng-model = "$ctrl.item1", placeholder = "...")
+            input(type = "text", ng-model = "$ctrl.item1", placeholder="...")
             a(class = "clearInput" ng-click = "$ctrl.item1=''") x 
             div.button(ng-click = "$ctrl.addItem($ctrl.item1)") Ekle
         div.sumlist
@@ -14,14 +14,14 @@ body
                     | {{item[0]}}
                 span(ng-click = "$ctrl.removeItem($index)") x
         div.hideArchive(ng-if = "!$ctrl.card.isArchived")
-            div.userinfo Kullanıcı:
-            div.userpic
-                img(src = "{{$ctrl.owner.picture.large}}")
+            div.userinfo
+            span.userSpan(ng-repeat="u in $ctrl.card.users" ) {{u}}
             div.archivebutton(ng-click = "$ctrl.archivedCard($ctrl.card.name)") Arşivle
+        div.adduser <br/>
+            input(type = "text", ng-model = "$ctrl.user", placeholder="...")
+            div.buttonUser(ng-click = "$ctrl.addUser($ctrl.user)") Kullanıcı Ekle
         div.hideArchive(ng-if = "$ctrl.card.isArchived")
-            div.userinfo Kullanıcı:
-            div.userpic
-                img(src = "{{$ctrl.owner.picture.large}}")
+            div.userinfo Kullanıcı: {{ $ctrl.owner.username }}
             div.archivebutton(ng-click = "$ctrl.sentBackCard($ctrl.card.name)") Geri Al
         div.hideWithCheckbox
             label.checkbox-inline

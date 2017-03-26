@@ -1,20 +1,32 @@
 module.exports = class ChatPaneController {
     constructor(ChatService, CardService) {
-        this.setArchiveScreen = CardService.archiveScreen;
+        this.archiveScreen = CardService.archiveScreen;
+        this.uptodateScreen = CardService.uptodateScreen;
         this.setSearchItem = CardService.searchItem;
         this.setSearchScreen = CardService.searchScreen;
+        this.recycleBinScreen = CardService.recycleBinScreen;
+        this.profileScreen = CardService.profileScreen;
         ChatService.owner.then(owner => {
-        this.owner = owner
+            this.owner = owner
         });
-        CardService.bind('UpToDateScreen', () => {
-            this.setArchiveScreen = CardService.archiveScreen;
+        CardService.bind('UptodateScreen', () => {
+            this.uptodateScreen = CardService.uptodateScreen;
         })
         CardService.bind('ArchiveScreen', () => {
-            this.setArchiveScreen = CardService.archiveScreen;
+            this.archiveScreen = CardService.archiveScreen;
         })
         CardService.bind('SearchScreen', () => {
             this.setSearchItem = CardService.searchItem;
             this.setSearchScreen = CardService.searchScreen;
+        })
+        CardService.bind('RecycleBin', () => {
+            this.recycleBinScreen = CardService.recycleBinScreen;
+        })
+        CardService.bind('User', () => {
+            this.userScreen = CardService.userScreen;
+        })
+        CardService.bind('Profile', () => {
+            this.profileScreen = CardService.profileScreen;
         })
     }
 }

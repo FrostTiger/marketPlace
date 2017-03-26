@@ -1,4 +1,5 @@
 var Card = require('../chat/user/card');
+var User = require('../chat/user/user');
 var threads = [
     {
         user: {
@@ -1005,109 +1006,111 @@ var owner = {
         state: "alpes-maritimes",
         zip: 98343
     },
-    cards: [new Card('17.03.2017-1',[
-            ['Yumurta', true],
-            ['Ekmek', false],
-            ['Biber', true],
-            ['Salatalık', false],
-            ['Salça', false],
-            ['Şampuan', true],
-            ['Kaşar', false],
-            ['Bebek bezi', false],
-            ['Eti-cin', true],
-            ['Sucuk', false],
-            ['Deterjan', false],
-            ['Yumoş', false],
-            ['Et', false],
-            ['Süt', false],
-            ['Domates', false]],
-            false),
-         new Card('14.03.2017-2',[
-            ['Erik', true],
-            ['Çay', false],
-            ['Mantar', true],
-            ['Yumurta', false],
-            ['Ekmek', false],
-            ['Maden suyu', false]],
-            false),
-         new Card('10.02.2017-3',[
-            ['Fındık', true],
-            ['Salça', false],
-            ['Şampuan', true],
-            ['Kaşar', false],
-            ['Deterjan', false],
-            ['Et', false],
-            ['Yumuşatıcı', true]],
-            false),
-         new Card('01.01.2017-4',[
-            ['Diş fırçası', true],
-            ['Makarna', false],
-            ['Kaşar', false],
-            ['Sucuk', false],
-            ['Ekmek', true],
-            ['Karanfil', false],
-            ['Bardak', false]],
-            false),
-          new Card('20.02.2017-5',[
-            ['Diş fırçası', true],
-            ['Makarna', false],
-            ['Kaşar', false],
-            ['Sucuk', false],
-            ['Ekmek', true],
-            ['Karanfil', false],
-            ['Bardak', false]],
-            false),
-          new Card('21.03.2017-6',[
-            ['Diş fırçası', true],
-            ['Makarna', false],
-            ['Kaşar', false],
-            ['Sucuk', false],
-            ['Ekmek', true],
-            ['Karanfil', false],
-            ['Bardak', false]],
-            false),
-          new Card('12.03.2017-7',[
-            ['Diş fırçası', true],
-            ['Makarna', false],
-            ['Kaşar', false],
-            ['Sucuk', false],
-            ['Ekmek', true],
-            ['Karanfil', false],
-            ['Bardak', false]],
-            false),
-          new Card('13.03.2017-8',[
-            ['Diş fırçası', true],
-            ['Makarna', false],
-            ['Kaşar', false],
-            ['Sucuk', false],
-            ['Ekmek', true],
-            ['Karanfil', false],
-            ['Bardak', false]],
-            false),
-          new Card('14.03.2017-9',[
-            ['Diş fırçası', true],
-            ['Makarna', false],
-            ['Kaşar', false],
-            ['Sucuk', false],
-            ['Ekmek', true],
-            ['Karanfil', false],
-            ['Bardak', false]],
-            false),
-          new Card('18.03.2017-10',[
-            ['Diş fırçası', true],
-            ['Makarna', true],
-            ['Kaşar', true],
-            ['Salça', true],
-            ['Şampuan', true],
-            ['Kaşar', false],
-            ['Deterjan', false],
-            ['Et', false],
-            ['Sucuk', false],
-            ['Ekmek', true],
-            ['Karanfil', false],
-            ['Bardak', false]],
-            true),
-        ],
+    deletedcards: [],
+    searchResult: [],
+    cards: [new Card('17.03.2017-1', [
+        ['Yumurta', true],
+        ['Ekmek', false],
+        ['Biber', true],
+        ['Salatalık', false],
+        ['Salça', false],
+        ['Şampuan', true],
+        ['Kaşar', false],
+        ['Bebek bezi', false],
+        ['Eti-cin', true],
+        ['Sucuk', false],
+        ['Deterjan', false],
+        ['Yumoş', false],
+        ['Et', false],
+        ['Süt', false],
+        ['Domates', false]],
+        false, false, ['reddog', 'gizem']),
+    new Card('14.03.2017-2', [
+        ['Erik', true],
+        ['Çay', false],
+        ['Mantar', true],
+        ['Yumurta', false],
+        ['Ekmek', false],
+        ['Maden suyu', false]],
+        false, false, ['reddog', 'ezgi']),
+    new Card('10.02.2017-3', [
+        ['Fındık', true],
+        ['Salça', false],
+        ['Şampuan', true],
+        ['Kaşar', false],
+        ['Deterjan', false],
+        ['Et', false],
+        ['Yumuşatıcı', true]],
+        false, false, ['reddog', 'kübra']),
+    new Card('01.01.2017-4', [
+        ['Diş fırçası', true],
+        ['Makarna', false],
+        ['Kaşar', false],
+        ['Sucuk', false],
+        ['Ekmek', true],
+        ['Karanfil', false],
+        ['Bardak', false]],
+        false, false, ['reddog']),
+    new Card('20.02.2017-5', [
+        ['Diş fırçası', true],
+        ['Makarna', false],
+        ['Kaşar', false],
+        ['Sucuk', false],
+        ['Ekmek', true],
+        ['Karanfil', false],
+        ['Bardak', false]],
+        false, false, ['reddog']),
+    new Card('21.03.2017-6', [
+        ['Diş fırçası', true],
+        ['Makarna', false],
+        ['Kaşar', false],
+        ['Sucuk', false],
+        ['Ekmek', true],
+        ['Karanfil', false],
+        ['Bardak', false]],
+        false, false, ['reddog']),
+    new Card('12.03.2017-7', [
+        ['Diş fırçası', true],
+        ['Makarna', false],
+        ['Kaşar', false],
+        ['Sucuk', false],
+        ['Ekmek', true],
+        ['Karanfil', false],
+        ['Bardak', false]],
+        false, false, ['reddog']),
+    new Card('13.03.2017-8', [
+        ['Diş fırçası', true],
+        ['Makarna', false],
+        ['Kaşar', false],
+        ['Sucuk', false],
+        ['Ekmek', true],
+        ['Karanfil', false],
+        ['Bardak', false]],
+        false, false, ['reddog']),
+    new Card('14.03.2017-9', [
+        ['Diş fırçası', true],
+        ['Makarna', false],
+        ['Kaşar', false],
+        ['Sucuk', false],
+        ['Ekmek', true],
+        ['Karanfil', false],
+        ['Bardak', false]],
+        false, false, ['reddog']),
+    new Card('18.03.2017-10', [
+        ['Diş fırçası', true],
+        ['Makarna', true],
+        ['Kaşar', true],
+        ['Salça', true],
+        ['Şampuan', true],
+        ['Kaşar', false],
+        ['Deterjan', false],
+        ['Et', false],
+        ['Sucuk', false],
+        ['Ekmek', true],
+        ['Karanfil', false],
+        ['Bardak', false]],
+        true, false, ['reddog']),
+    ],
     email: "ana.garnier@example.com",
     username: "reddog",
     password: "secure",
@@ -1124,7 +1127,11 @@ var owner = {
         large: "https://randomuser.me/api/portraits/women/82.jpg",
         medium: "https://randomuser.me/api/portraits/med/women/82.jpg",
         thumbnail: "https://randomuser.me/api/portraits/thumb/women/82.jpg"
-    }
+    },
+    users: [new User('Erkek', 'Armağan Amcalar', 'https://randomuser.me/api/portraits/men/67.jpg'),
+    new User('Kadın', 'Ezgi Çatalbaş', 'https://randomuser.me/api/portraits/women/92.jpg'),
+    new User('Erkek', 'Micheal Jackson', 'https://randomuser.me/api/portraits/men/47.jpg'),
+    new User('Kadın', 'Kübra Gizem', 'https://randomuser.me/api/portraits/women/84.jpg')]
 };
 
 var allMessages = 'How promotion excellent curiosity yet attempted happiness. Gay prosperous impression had conviction. For every delay death ask style. Me mean able my by in they. Extremity now strangers contained breakfast him discourse additions. Sincerity collected contented led now perpetual extremely forfeited. Living valley had silent eat merits esteem bed. In last an or went wise as left. Visited civilly am demesne so colonel he calling. So unreserved do interested increasing sentiments. Vanity day giving points within six not law. Few impression difficulty his use has comparison decisively. Next his only boy meet the fat rose when. Do repair at we misery wanted remove remain income. Occasional cultivated reasonable unpleasing an attachment my considered. Having ask and coming object seemed put did admire figure. Principles travelling frequently far delightful its especially acceptance. Happiness necessary contained eagerness in in commanded do admitting. Favourable continuing difficulty had her solicitude far. Nor doubt off widow all death aware offer. We will up able in both do sing. Day handsome addition horrible sensible goodness two contempt. Evening for married his account removal. Estimable me disposing of be moonlight cordially curiosity. Delay rapid joy share allow age manor six. Went why far saw many knew. Exquisite excellent son gentleman acuteness her. Do is voice total power mr ye might round still. In it except to so temper mutual tastes mother. Interested cultivated its continuing now yet are. Out interested acceptance our partiality affronting unpleasant why add. Esteem garden men yet shy course. Consulted up my tolerably sometimes perpetual oh. Expression acceptance imprudence particular had eat unsatiable. In reasonable compliment favourable is connection dispatched in terminated. Do esteem object we called father excuse remove. So dear real on like more it. Laughing for two families addition expenses surprise the. If sincerity he to curiosity arranging. Learn taken terms be as. Scarcely mrs produced too removing new old. An sincerity so extremity he additions. Her yet there truth merit. Mrs all projecting favourable now unpleasing. Son law garden chatty temper. Oh children provided to mr elegance marriage strongly. Off can admiration prosperous now devonshire diminution law. Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety delighted explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By sometimes intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained. Does cold even song like two yet been. Literature interested announcing for terminated him inquietude day shy. Himself he fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not way. Agreed joy vanity regret met may ladies oppose who. Mile fail as left as hard eyes. Meet made call in mean four year it to. Prospect so branched wondered sensible of up. For gay consisted resolving pronounce sportsman saw discovery not. Northward or household as conveying we earnestly believing. No in up contrasted discretion inhabiting excellence. Entreaties we collecting unpleasant at everything conviction. Seen you eyes son show. Far two unaffected one alteration apartments celebrated but middletons interested. Described deficient applauded consisted my me do. Passed edward two talent effect seemed engage six. On ye great do child sorry lived. Proceed cottage far letters ashamed get clothes day. Stairs regret at if matter to. On as needed almost at basket remain. By improved sensible servants children striking in surprise.';
@@ -1157,12 +1164,12 @@ function getRandomMessage() {
 function getRandomMessages() {
     var length = Math.floor(Math.random() * 10 + 10);
 
-    return new Array(length).join().split('').map(function() {
+    return new Array(length).join().split('').map(function () {
         return getRandomMessage();
     });
 }
 
-threads = threads.map(function(thread) {
+threads = threads.map(function (thread) {
     thread.messages = getRandomMessages();
     thread.id = thread.user.username;
 

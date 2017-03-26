@@ -1,8 +1,8 @@
 module.exports = class User {
-    constructor(user) {
-        this.gender = user.gender;
-        this.name = user.name;
-        this.picture = user.picture;
+    constructor(gender, name, picture) {
+        this.gender = gender;
+        this.name = name;
+        this.picture = picture;
     }
 
     getFullName() {

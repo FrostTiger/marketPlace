@@ -1,25 +1,25 @@
 class ChatRepository {
     constructor($http, $timeout, $q) {
         // For demo purposes
-        var lazyResponse = function(promise, duration) {
+        var lazyResponse = function (promise, duration) {
             duration = duration || 300;
 
-            return $q(function(resolve) {
-                $timeout(function() {
+            return $q(function (resolve) {
+                $timeout(function () {
                     promise.then(resolve);
                 }, duration);
             });
         };
 
-        this.getThreads = function() {
+        this.getThreads = function () {
             return lazyResponse($http.get('/api/threads'));
         };
 
-        this.getUpdates = function() {
+        this.getUpdates = function () {
             return lazyResponse($http.get('/api/updates'));
         };
 
-        this.getOwner = function() {
+        this.getOwner = function () {
             return lazyResponse($http.get('/api/owner'));
         };
     }

@@ -6,4 +6,5 @@ require('./panes/mother-pane');
 require('./root');
 require('./chat-boxes/shopping-card')
 require('./chat-boxes/user-box')
+require('./panes/login-pane');
 

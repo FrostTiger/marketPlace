@@ -1,0 +1,9 @@
+div.loginimg
+    img(src="/static/logo.png")
+div.logintextcontainer
+    div.loginusername Kullanıcı adı:
+        input(type = "text", ng-model = "username", placeholder = "...")
+    div.loginpassword Parola:
+        input(type = "password", ng-model = "password", placeholder = "...")
+div.loginbutton(ng-click = "$ctrl.checkLoginAttempt(username, password)") Giriş yap
+div.errormessage(ng-if="$ctrl.errMessage") Hatalı şifre veya parola

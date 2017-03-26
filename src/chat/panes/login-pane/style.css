@@ -1,0 +1,98 @@
+login-pane {
+    background-color: dimgrey;
+    width: 400px;
+    height: 305px;
+    position: fixed;
+    top: 30%;
+    left: 35%;
+    border-radius: 10px;
+    z-index: 1;
+    border: 1px solid #ccc;
+    
+}
+
+.loginimg{
+    width: 400px;
+    height: 120px;
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+}
+.loginimg img{
+    height: 64px;
+    width: 64px;
+    position: absolute;
+    top: 40px;
+    left: 165px;
+}
+
+.logintextcontainer{
+    width: 300px;
+    height: 120px;
+    position: absolute;
+    border-radius: 10px;
+    top: 120;
+    left: 50;
+    background-color: orange;
+    border: 2px solid #ccc;
+}
+
+.loginusername{
+    width: 275px;
+    height: 40px;
+    position: absolute;
+    border-radius: 10px;
+    top: 10;
+    left: 10;
+    background-color: lightgrey;
+    border: 2px solid black;
+    margin: 3px;
+    padding: 5px;
+}
+
+.loginusername input{
+    width: 160px;
+    left: 0px;
+}
+
+.loginpassword{
+    width: 275px;
+    height: 40px;
+    position: absolute;
+    border-radius: 10px;
+    top: 55;
+    left: 10;
+    background-color: lightgrey;
+    border: 2px solid black;
+    margin: 3px;
+    padding: 5px;
+}
+
+.loginpassword input{
+    width: 160px;
+    left: 45px;
+}
+
+.loginbutton{
+    width: 92px;
+    height: 40px;
+    position: absolute;
+    border-radius: 5px;
+    top: 250px;
+    left: 260px;
+    background-color: orange;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.loginbutton:hover{
+    background-color: orangered;
+    cursor: pointer;
+}
+
+.errormessage{
+    top: 260px;
+    left: 50px;
+    position: absolute;
+}

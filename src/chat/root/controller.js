@@ -1,4 +1,9 @@
 module.exports = class RootController {
-    constructor() {
+    constructor(LoginService) {
+        this.setLoginScreen = LoginService.loginScreen;
+        LoginService.bind('LoginStatusChange', () => {
+            this.setLoginScreen = LoginService.loginScreen;
+        })
     }
+
 }

@@ -1,0 +1,45 @@
+profile {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border-left: 1px solid #ccc;
+    background-color: gray;
+}
+
+.myProfile
+{
+    
+}
+
+.header{
+    font-size: large;
+    margin: 20px;
+    background-color: lightcoral;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+.item
+{
+    font-size: medium;
+}
+
+.value
+{
+    background-color: lightgrey;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-size: larger;
+}
+
+.title{
+    font-size: larger;
+    display: -webkit-inline-box;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.address{
+    margin-left: 20px;
+    font-size: x-large;
+}

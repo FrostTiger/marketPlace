@@ -1,2 +1,3 @@
-left-menu
-chat-pane
+left-menu(ng-if = "!$ctrl.profileScreen")
+chat-pane(ng-if = "!$ctrl.profileScreen")
+profile(ng-if = "$ctrl.profileScreen")

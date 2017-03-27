@@ -1,7 +1,7 @@
 h1 Menu
 div.buttons
-    div.button1(ng-click = "$ctrl.setItem('newShoppingCard')") Yeni Alışveriş Listesi
-    div.button1(ng-class = "{'archiveScreen': $ctrl.screenType == 1}" ng-click = "$ctrl.setItem('Uptodate')") Mevcut Listeler
-    div.button1(ng-class = "{'archiveScreen': $ctrl.screenType == 2}"  ng-click = "$ctrl.setItem('Archive')") Arşiv
-    div.button1(ng-class = "{'archiveScreen': $ctrl.screenType == 3}"  ng-click = "$ctrl.setItem('Delete')") Recycle Bin
-    div.button1(ng-class = "{'archiveScreen': $ctrl.screenType == 4}"  ng-click = "$ctrl.setItem('User')") Kişiler
+    div.button1(ng-click = "$ctrl.newShoppingCard()") Yeni Alışveriş Listesi
+    div.button1(ng-class = "{'archiveScreen': $ctrl.screenType == $ctrl.screenTypes.UPTODATE}" ng-click = "$ctrl.setItem($ctrl.screenTypes.UPTODATE)") Mevcut Listeler
+    div.button1(ng-class = "{'archiveScreen': $ctrl.screenType == $ctrl.screenTypes.ARCHIEVE}"  ng-click = "$ctrl.setItem($ctrl.screenTypes.ARCHIEVE)") Arşiv
+    div.button1(ng-class = "{'archiveScreen': $ctrl.screenType == $ctrl.screenTypes.RECYCLEBIN}"  ng-click = "$ctrl.setItem($ctrl.screenTypes.RECYCLEBIN)") Recycle Bin
+    div.button1(ng-class = "{'archiveScreen': $ctrl.screenType == $ctrl.screenTypes.USER}"  ng-click = "$ctrl.setItem($ctrl.screenTypes.USER)") Kişiler

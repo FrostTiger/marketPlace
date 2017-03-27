@@ -9,12 +9,7 @@ class CardService extends EventEmitter {
         });
         //Activate uptodate list or archivelist
         // true - Archive List / false - Uptodate list
-        this.archiveScreen = false;
-        this.uptodateScreen = true;
-        this.searchScreen = false;
-        this.recycleBinScreen = false;
-        this.userScreen = false;
-        this.profileScreen = false;
+
         this.searchItem = '';
         this.content = 'Delete';
     }
@@ -44,42 +39,6 @@ class CardService extends EventEmitter {
         }
     }
 
-    setUptodateScreen() {
-        this.archiveScreen = false;
-        this.uptodateScreen = true;
-        this.searchScreen = false;
-        this.recycleBinScreen = false;
-        this.userScreen = false;
-        this.profileScreen = false;
-        this.trigger('UptodateScreen');
-        this.trigger('SearchScreen');
-        this.trigger('RecycleBin');
-        this.trigger('ArchiveScreen');
-        this.trigger('User');
-    }
-
-    setArchiveScreen() {
-        this.archiveScreen = true;
-        this.uptodateScreen = false;
-        this.searchScreen = false;
-        this.recycleBinScreen = false;
-        this.userScreen = false;
-        this.profileScreen = false;
-        this.trigger('UptodateScreen');
-        this.trigger('SearchScreen');
-        this.trigger('RecycleBin');
-        this.trigger('ArchiveScreen');
-        this.trigger('User');
-    }
-
-    setSearchScreen(content) {
-        this.searchItem = content;
-        this.searchScreen = true;
-        this.archiveScreen = false;
-        this.recycleBinScreen = false;
-        this.trigger('SearchScreen');
-    }
-
     createNewShoppingCard() {
         var today = new Date();
         var day = today.getDate();
@@ -102,36 +61,27 @@ class CardService extends EventEmitter {
         }
     }
 
-    setRecycleBinScreen() {
-        this.archiveScreen = false;
-        this.searchScreen = false;
-        this.recycleBinScreen = true;
-        this.userScreen = false;
-        this.profileScreen = false;
-        this.uptodateScreen = false;
-        this.trigger('UptodateScreen');
+    setSearchScreen(content) {
+        this.searchItem = content;
         this.trigger('SearchScreen');
-        this.trigger('RecycleBin');
-        this.trigger('ArchiveScreen');
-        this.trigger('User');
     }
 
-    setUserScreen() {
-        this.archiveScreen = false;
-        this.searchScreen = false;
-        this.recycleBinScreen = false;
-        this.userScreen = true;
-        this.profileScreen = false;
-        this.uptodateScreen = false;
-        this.trigger('UptodateScreen');
-        this.trigger('SearchScreen');
-        this.trigger('RecycleBin');
-        this.trigger('ArchiveScreen');
-        this.trigger('User');
-    }
-
-    searchResult(content) {
-        var te = this.owner.cards;
+    setScreenType(type) {
+        this.screenType = type;
+        if (type == 1) {
+            this.trigger('UptodateScreen');
+        } else if (type == 6) {
+            this.trigger('SearchScreen');
+        }
+        else if (type == 3) {
+            this.trigger('RecycleBin');
+        }
+        else if (type == 2) {
+            this.trigger('ArchiveScreen');
+        }
+        else if (type == 4) {
+            this.trigger('User');
+        }
     }
 }
 

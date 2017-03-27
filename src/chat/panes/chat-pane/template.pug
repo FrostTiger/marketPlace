@@ -1,6 +1,6 @@
-shopping-card(ng-repeat = "card in $ctrl.owner.cards" card = "card" ng-if = "$ctrl.uptodateScreen && !card.isArchived && !$ctrl.archiveScreen && !$ctrl.setSearchScreen")
-shopping-card(ng-repeat = "card in $ctrl.owner.cards" card = "card" ng-if = "!$ctrl.uptodateScreen && card.isArchived && $ctrl.archiveScreen && !$ctrl.setSearchScreen")
-shopping-card(ng-repeat = "card in $ctrl.owner.searchResult" card = "card" ng-if = "$ctrl.setSearchScreen")
-div.buttonDelete(ng-click = "$ctrl.deleteAllCards()" ng-if="$ctrl.recycleBinScreen && !$ctrl.setSearchScreen && !$ctrl.userScreen") Hepsini Sil
-shopping-card(ng-repeat = "card in $ctrl.owner.deletedcards" card = "card" ng-if = "$ctrl.recycleBinScreen && !$ctrl.setSearchScreen && !$ctrl.userScreen")
-user-box(ng-repeat = "user in $ctrl.owner.users" user = "user" ng-if = "$ctrl.userScreen")
+shopping-card(ng-repeat = "card in $ctrl.owner.cards" card = "card" ng-if = "$ctrl.screenType == 1")
+shopping-card(ng-repeat = "card in $ctrl.owner.cards" card = "card" ng-if = "$ctrl.screenType == 2 && card.isArchived")
+shopping-card(ng-repeat = "card in $ctrl.owner.searchResult" card = "card" ng-if = "$ctrl.screenType == 6")
+div.buttonDelete(ng-click = "$ctrl.deleteAllCards()" ng-if="$ctrl.screenType == 3") Hepsini Sil
+shopping-card(ng-repeat = "card in $ctrl.owner.deletedcards" card = "card" ng-if = "$ctrl.screenType == 3")
+user-box(ng-repeat = "user in $ctrl.owner.users" user = "user" ng-if = "$ctrl.screenType == 4")

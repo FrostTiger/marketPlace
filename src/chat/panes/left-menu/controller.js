@@ -1,44 +1,43 @@
 module.exports = class LeftMenuController {
-    constructor(CardService) {
+    constructor(ChatService, CardService) {
         this.cardService = CardService;
-        this.archiveScreen = CardService.archiveScreen;
-        this.uptodateScreen = CardService.uptodateScreen;
-        this.setSearchItem = CardService.searchItem;
-        this.setSearchScreen = CardService.searchScreen;
-        this.recycleBinScreen = CardService.recycleBinScreen;
-        this.profileScreen = CardService.profileScreen;
-        this.userScreen = CardService.userScreen;
+        if (this.screenType == undefined) {
+            this.screenType = 1;
+        }
+        ChatService.owner.then(owner => {
+            this.owner = owner
+        });
         CardService.bind('UptodateScreen', () => {
-            this.uptodateScreen = CardService.uptodateScreen;
+            this.screenType = this.owner.ScreenType.UPTODATE;
         })
         CardService.bind('ArchiveScreen', () => {
-            this.archiveScreen = CardService.archiveScreen;
+            this.screenType = this.owner.ScreenType.ARCHIEVE;
         })
         CardService.bind('SearchScreen', () => {
             this.setSearchItem = CardService.searchItem;
-            this.setSearchScreen = CardService.searchScreen;
+            this.screenType = this.owner.ScreenType.SEARCH;
         })
         CardService.bind('RecycleBin', () => {
-            this.recycleBinScreen = CardService.recycleBinScreen;
+            this.screenType = this.owner.ScreenType.RECYCLEBIN;
         })
         CardService.bind('User', () => {
-            this.userScreen = CardService.userScreen;
+            this.screenType = this.owner.ScreenType.USER;
         })
         CardService.bind('Profile', () => {
-            this.profileScreen = CardService.profileScreen;
+            this.screenType = this.owner.ScreenType.PROFILE;
         })
     }
 
     setItem(item) {
         if (item == "Uptodate")
-            this.cardService.setUptodateScreen();
+            this.cardService.setScreenType(this.owner.ScreenType.UPTODATE);
         else if (item == "Archive")
-            this.cardService.setArchiveScreen();
+            this.cardService.setScreenType(this.owner.ScreenType.ARCHIEVE);
         else if (item == 'newShoppingCard')
             this.cardService.createNewShoppingCard();
         else if (item == 'Delete')
-            this.cardService.setRecycleBinScreen();
+            this.cardService.setScreenType(this.owner.ScreenType.RECYCLEBIN);
         else if (item == 'User')
-            this.cardService.setUserScreen();
+            this.cardService.setScreenType(this.owner.ScreenType.USER);
     }
 }

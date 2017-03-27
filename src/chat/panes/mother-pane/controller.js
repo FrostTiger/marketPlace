@@ -1,15 +1,14 @@
 module.exports = class MotherPaneController {
     constructor(CardService, ChatService) {
         this.cardService = CardService;
-        this.archiveScreen = CardService.archiveScreen;
-        this.uptodateScreen = CardService.uptodateScreen;
-        this.setSearchItem = CardService.searchItem;
-        this.setSearchScreen = CardService.searchScreen;
-        this.recycleBinScreen = CardService.recycleBinScreen;
-        this.profileScreen = CardService.profileScreen;
-        this.userScreen = CardService.userScreen;
+        ChatService.owner.then(owner => {
+            this.owner = owner
+        });
+        if (this.screenType == undefined) {
+            this.screenType = 1;
+        }
         CardService.bind('UptodateScreen', () => {
-            this.uptodateScreen = CardService.uptodateScreen;
+            this.screenType = this.owner.ScreenType.UPTODATE;
         })
         CardService.bind('ArchiveScreen', () => {
             this.archiveScreen = CardService.archiveScreen;
@@ -25,9 +24,7 @@ module.exports = class MotherPaneController {
             this.userScreen = CardService.userScreen;
         })
         CardService.bind('Profile', () => {
-            this.profileScreen = CardService.profileScreen;
+            this.screenType = this.owner.ScreenType.PROFILE;
         })
     }
-
-
 }

@@ -4,11 +4,14 @@ module.exports = class MotherPaneController {
         ChatService.owner.then(owner => {
             this.owner = owner
         });
+        ChatService.screenTypes.then(screenTypes => {
+            this.screenTypes = screenTypes
+        });
         if (this.screenType == undefined) {
             this.screenType = 1;
         }
         CardService.bind('UptodateScreen', () => {
-            this.screenType = this.owner.ScreenType.UPTODATE;
+            this.screenType = this.screenTypes.UPTODATE;
         })
         CardService.bind('ArchiveScreen', () => {
             this.archiveScreen = CardService.archiveScreen;
@@ -24,7 +27,7 @@ module.exports = class MotherPaneController {
             this.userScreen = CardService.userScreen;
         })
         CardService.bind('Profile', () => {
-            this.screenType = this.owner.ScreenType.PROFILE;
+            this.screenType = this.screenTypes.PROFILE;
         })
     }
 }

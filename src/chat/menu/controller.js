@@ -4,25 +4,27 @@ module.exports = class MenuController {
         ChatService.owner.then(owner => {
             this.owner = owner
         });
-
+ChatService.screenTypes.then(screenTypes => {
+            this.screenTypes = screenTypes
+        });
         CardService.bind('UptodateScreen', () => {
-            this.screenType = this.owner.ScreenType.UPTODATE;
+            this.screenType = this.screenTypes.UPTODATE;
         })
         CardService.bind('ArchiveScreen', () => {
-            this.screenType = this.owner.ScreenType.ARCHIEVE;
+            this.screenType = this.screenTypes.ARCHIEVE;
         })
         CardService.bind('SearchScreen', () => {
             this.setSearchItem = CardService.searchItem;
-            this.screenType = this.owner.ScreenType.SEARCH;
+            this.screenType = this.screenTypes.SEARCH;
         })
         CardService.bind('RecycleBin', () => {
-            this.screenType = this.owner.ScreenType.RECYCLEBIN;
+            this.screenType = this.screenTypes.RECYCLEBIN;
         })
         CardService.bind('User', () => {
-            this.screenType = this.owner.ScreenType.USER;
+            this.screenType = this.screenTypes.USER;
         })
         CardService.bind('Profile', () => {
-            this.screenType = this.owner.ScreenType.PROFILE;
+            this.screenType = this.screenTypes.PROFILE;
         })
     }
 
@@ -46,12 +48,12 @@ module.exports = class MenuController {
     }
 
     myProfile() {
-        this.cardService.ScreenType = this.owner.ScreenType.PROFILE;
+        this.cardService.ScreenType = this.screenTypes.PROFILE;
         this.cardService.trigger('Profile');
     }
 
     shoppingList() {
-        this.cardService.ScreenType = this.owner.ScreenType.UPTODATE;
+        this.cardService.ScreenType = this.screenTypes.UPTODATE;
         this.cardService.trigger('UptodateScreen');
     }
 }

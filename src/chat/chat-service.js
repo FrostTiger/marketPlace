@@ -68,10 +68,15 @@ class ChatService extends EventEmitter {
         };
 
         var ownerDeferred = $q.defer();
-
         this.owner = ownerDeferred.promise;
         ChatRepository.getOwner().then(function (response) {
             ownerDeferred.resolve(response.data);
+        });
+
+        var screenTypesDeferred = $q.defer();
+        this.screenTypes = screenTypesDeferred.promise;
+        ChatRepository.getScreenTypes().then(function (response) {
+            screenTypesDeferred.resolve(response.data);
         });
 
         getThreads();

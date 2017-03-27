@@ -22,6 +22,10 @@ class ChatRepository {
         this.getOwner = function () {
             return lazyResponse($http.get('/api/owner'));
         };
+
+        this.getScreenTypes = function () {
+            return lazyResponse($http.get('/api/screenTypes'));
+        };
     }
 }
 

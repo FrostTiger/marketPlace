@@ -4,6 +4,26 @@ module.exports = class MenuController {
         ChatService.owner.then(owner => {
             this.owner = owner
         });
+
+        CardService.bind('UptodateScreen', () => {
+            this.screenType = this.owner.ScreenType.UPTODATE;
+        })
+        CardService.bind('ArchiveScreen', () => {
+            this.screenType = this.owner.ScreenType.ARCHIEVE;
+        })
+        CardService.bind('SearchScreen', () => {
+            this.setSearchItem = CardService.searchItem;
+            this.screenType = this.owner.ScreenType.SEARCH;
+        })
+        CardService.bind('RecycleBin', () => {
+            this.screenType = this.owner.ScreenType.RECYCLEBIN;
+        })
+        CardService.bind('User', () => {
+            this.screenType = this.owner.ScreenType.USER;
+        })
+        CardService.bind('Profile', () => {
+            this.screenType = this.owner.ScreenType.PROFILE;
+        })
     }
 
     setSearchItemScreen(item) {
@@ -23,5 +43,15 @@ module.exports = class MenuController {
                 this.owner.searchResult.push(this.owner.cards[i]);
             }
         }
+    }
+
+    myProfile() {
+        this.cardService.ScreenType = this.owner.ScreenType.PROFILE;
+        this.cardService.trigger('Profile');
+    }
+
+    shoppingList() {
+        this.cardService.ScreenType = this.owner.ScreenType.UPTODATE;
+        this.cardService.trigger('UptodateScreen');
     }
 }

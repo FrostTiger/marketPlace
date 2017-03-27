@@ -1,2 +1,3 @@
-left-menu
-chat-pane
+left-menu(ng-if = "$ctrl.screenType != 5")
+chat-pane(ng-if = "$ctrl.screenType != 5")
+profile(ng-if = "$ctrl.screenType == 5")

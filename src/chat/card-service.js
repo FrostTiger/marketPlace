@@ -7,6 +7,10 @@ class CardService extends EventEmitter {
         ChatService.owner.then(owner => {
             this.owner = owner
         });
+
+        ChatService.screenTypes.then(screenTypes => {
+            this.screenTypes = screenTypes
+        });
         //Activate uptodate list or archivelist
         // true - Archive List / false - Uptodate list
 
@@ -63,25 +67,12 @@ class CardService extends EventEmitter {
 
     setSearchScreen(content) {
         this.searchItem = content;
-        this.trigger('SearchScreen');
+        this.trigger(this.screenTypes.SEARCH);
     }
 
     setScreenType(type) {
         this.screenType = type;
-        if (type == 1) {
-            this.trigger('UptodateScreen');
-        } else if (type == 6) {
-            this.trigger('SearchScreen');
-        }
-        else if (type == 3) {
-            this.trigger('RecycleBin');
-        }
-        else if (type == 2) {
-            this.trigger('ArchiveScreen');
-        }
-        else if (type == 4) {
-            this.trigger('User');
-        }
+        this.trigger(type);
     }
 }
 

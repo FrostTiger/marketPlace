@@ -49,10 +49,10 @@ left-menu p {
 left-menu p:hover {
     background-color: dimgrey;
 }
-.archiveScreen{
+.active{
     background-color: darkorange;
 }
-.archiveScreen:hover{
+.active:hover{
     background-color: orange;
 }
 .recycleBin{

@@ -4,28 +4,30 @@ module.exports = class MenuController {
         ChatService.owner.then(owner => {
             this.owner = owner
         });
-ChatService.screenTypes.then(screenTypes => {
+        ChatService.screenTypes.then(screenTypes => {
             this.screenTypes = screenTypes
+
+            CardService.bind(this.screenTypes.UPTODATE, () => {
+                this.screenType = this.screenTypes.UPTODATE;
+            })
+            CardService.bind(this.screenTypes.ARCHIVE, () => {
+                this.screenType = this.screenTypes.ARCHIVE;
+            })
+            CardService.bind(this.screenTypes.SEARCH, () => {
+                this.setSearchItem = CardService.searchItem;
+                this.screenType = this.screenTypes.SEARCH;
+            })
+            CardService.bind(this.screenTypes.RECYCLEBIN, () => {
+                this.screenType = this.screenTypes.RECYCLEBIN;
+            })
+            CardService.bind(this.screenTypes.USER, () => {
+                this.screenType = this.screenTypes.USER;
+            })
+            CardService.bind(this.screenTypes.PROFILE, () => {
+                this.screenType = this.screenTypes.PROFILE;
+            })
         });
-        CardService.bind('UptodateScreen', () => {
-            this.screenType = this.screenTypes.UPTODATE;
-        })
-        CardService.bind('ArchiveScreen', () => {
-            this.screenType = this.screenTypes.ARCHIEVE;
-        })
-        CardService.bind('SearchScreen', () => {
-            this.setSearchItem = CardService.searchItem;
-            this.screenType = this.screenTypes.SEARCH;
-        })
-        CardService.bind('RecycleBin', () => {
-            this.screenType = this.screenTypes.RECYCLEBIN;
-        })
-        CardService.bind('User', () => {
-            this.screenType = this.screenTypes.USER;
-        })
-        CardService.bind('Profile', () => {
-            this.screenType = this.screenTypes.PROFILE;
-        })
+
     }
 
     setSearchItemScreen(item) {
@@ -49,11 +51,11 @@ ChatService.screenTypes.then(screenTypes => {
 
     myProfile() {
         this.cardService.ScreenType = this.screenTypes.PROFILE;
-        this.cardService.trigger('Profile');
+        this.cardService.trigger(this.screenTypes.PROFILE);
     }
 
     shoppingList() {
         this.cardService.ScreenType = this.screenTypes.UPTODATE;
-        this.cardService.trigger('UptodateScreen');
+        this.cardService.trigger(this.screenTypes.UPTODATE);
     }
 }

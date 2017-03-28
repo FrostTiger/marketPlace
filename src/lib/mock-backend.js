@@ -1136,7 +1136,7 @@ var owner = {
 
 var ScreenTypes = {
         UPTODATE: 1,
-        ARCHIEVE: 2,
+        ARCHIVE: 2,
         RECYCLEBIN: 3,
         USER: 4,
         PROFILE: 5,

@@ -7,14 +7,13 @@ class CardService extends EventEmitter {
         ChatService.owner.then(owner => {
             this.owner = owner
         });
+
+        ChatService.screenTypes.then(screenTypes => {
+            this.screenTypes = screenTypes
+        });
         //Activate uptodate list or archivelist
         // true - Archive List / false - Uptodate list
-        this.archiveScreen = false;
-        this.uptodateScreen = true;
-        this.searchScreen = false;
-        this.recycleBinScreen = false;
-        this.userScreen = false;
-        this.profileScreen = false;
+
         this.searchItem = '';
         this.content = 'Delete';
     }
@@ -44,42 +43,6 @@ class CardService extends EventEmitter {
         }
     }
 
-    setUptodateScreen() {
-        this.archiveScreen = false;
-        this.uptodateScreen = true;
-        this.searchScreen = false;
-        this.recycleBinScreen = false;
-        this.userScreen = false;
-        this.profileScreen = false;
-        this.trigger('UptodateScreen');
-        this.trigger('SearchScreen');
-        this.trigger('RecycleBin');
-        this.trigger('ArchiveScreen');
-        this.trigger('User');
-    }
-
-    setArchiveScreen() {
-        this.archiveScreen = true;
-        this.uptodateScreen = false;
-        this.searchScreen = false;
-        this.recycleBinScreen = false;
-        this.userScreen = false;
-        this.profileScreen = false;
-        this.trigger('UptodateScreen');
-        this.trigger('SearchScreen');
-        this.trigger('RecycleBin');
-        this.trigger('ArchiveScreen');
-        this.trigger('User');
-    }
-
-    setSearchScreen(content) {
-        this.searchItem = content;
-        this.searchScreen = true;
-        this.archiveScreen = false;
-        this.recycleBinScreen = false;
-        this.trigger('SearchScreen');
-    }
-
     createNewShoppingCard() {
         var today = new Date();
         var day = today.getDate();
@@ -102,36 +65,14 @@ class CardService extends EventEmitter {
         }
     }
 
-    setRecycleBinScreen() {
-        this.archiveScreen = false;
-        this.searchScreen = false;
-        this.recycleBinScreen = true;
-        this.userScreen = false;
-        this.profileScreen = false;
-        this.uptodateScreen = false;
-        this.trigger('UptodateScreen');
-        this.trigger('SearchScreen');
-        this.trigger('RecycleBin');
-        this.trigger('ArchiveScreen');
-        this.trigger('User');
+    setSearchScreen(content) {
+        this.searchItem = content;
+        this.trigger(this.screenTypes.SEARCH);
     }
 
-    setUserScreen() {
-        this.archiveScreen = false;
-        this.searchScreen = false;
-        this.recycleBinScreen = false;
-        this.userScreen = true;
-        this.profileScreen = false;
-        this.uptodateScreen = false;
-        this.trigger('UptodateScreen');
-        this.trigger('SearchScreen');
-        this.trigger('RecycleBin');
-        this.trigger('ArchiveScreen');
-        this.trigger('User');
-    }
-
-    searchResult(content) {
-        var te = this.owner.cards;
+    setScreenType(type) {
+        this.screenType = type;
+        this.trigger(type);
     }
 }
 

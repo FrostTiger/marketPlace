@@ -6,7 +6,6 @@ module.exports = class ShoppingCardController {
             this.owner = owner
         });
         ChatService.screenTypes.then(screenTypes => {
-            debugger;
             this.screenTypes = screenTypes
         });
         CardService.bind('ArchiveScreen', () => {

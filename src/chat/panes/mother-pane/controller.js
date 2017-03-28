@@ -6,28 +6,27 @@ module.exports = class MotherPaneController {
         });
         ChatService.screenTypes.then(screenTypes => {
             this.screenTypes = screenTypes
+
+            CardService.bind(this.screenTypes.UPTODATE, () => {
+                this.screenType = this.screenTypes.UPTODATE;
+            })
+            CardService.bind(this.screenTypes.ARCHIVE, () => {
+                this.screenType = this.screenTypes.ARCHIVE;
+            })
+            CardService.bind(this.screenTypes.SEARCH, () => {
+                this.setSearchItem = CardService.searchItem;
+                this.screenType = this.screenTypes.SEARCH;
+            })
+            CardService.bind(this.screenTypes.RECYCLEBIN, () => {
+                this.screenType = this.screenTypes.RECYCLEBIN;
+            })
+            CardService.bind(this.screenTypes.USER, () => {
+                this.screenType = this.screenTypes.USER;
+            })
+            CardService.bind(this.screenTypes.PROFILE, () => {
+                this.screenType = this.screenTypes.PROFILE;
+            })
         });
-        if (this.screenType == undefined) {
-            this.screenType = 1;
-        }
-        CardService.bind('UptodateScreen', () => {
-            this.screenType = this.screenTypes.UPTODATE;
-        })
-        CardService.bind('ArchiveScreen', () => {
-            this.archiveScreen = CardService.archiveScreen;
-        })
-        CardService.bind('SearchScreen', () => {
-            this.setSearchItem = CardService.searchItem;
-            this.setSearchScreen = CardService.searchScreen;
-        })
-        CardService.bind('RecycleBin', () => {
-            this.recycleBinScreen = CardService.recycleBinScreen;
-        })
-        CardService.bind('User', () => {
-            this.userScreen = CardService.userScreen;
-        })
-        CardService.bind('Profile', () => {
-            this.screenType = this.screenTypes.PROFILE;
-        })
+
     }
 }

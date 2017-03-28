@@ -2,16 +2,16 @@ div(class='myProfile')
     div
         p.header 
             span.title UserName:
-            span.value {{ $ctrl.owner.username}}
+            input.value(type = "text", ng-model = "$ctrl.owner.username", placeholder="User Name")
     div
         p.header 
             span.title  Name: 
-            span.value {{$ctrl.owner.name.title}}
-            span.value {{$ctrl.owner.name.first}}
+            input.value(type = "text", ng-model = "$ctrl.owner.name.title", placeholder="Title")
+            input.value(type = "text", ng-model = "$ctrl.owner.name.first", placeholder="Name")
     div
         p.header 
             span.title  LastName:
-            span.value {{$ctrl.owner.name.last}}
+            input.value(type = "text", ng-model = "$ctrl.owner.name.last", placeholder="Last Name")
     div
         p.header 
             span.title  Image 
@@ -19,33 +19,33 @@ div(class='myProfile')
     div
         p.header 
             span.title  Password
-            span.value {{$ctrl.owner.password}}
+            input.value(type = "text", ng-model = "$ctrl.owner.password", placeholder="Password")
     div
         p.header 
             span.title  Gender 
-            span.value {{$ctrl.owner.gender}}
+            input.value(type = "text", ng-model = "$ctrl.owner.gender", placeholder="Gender")
     div
         p.header 
             span.title  Phone 
-            span.value {{$ctrl.owner.phone}}
+            input.value(type = "text", ng-model = "$ctrl.owner.phone", placeholder="Phone")
     div
         p.header 
-            span.title E-Mail 
-            span.value {{$ctrl.owner.email}}
+            span.title  E-Mail 
+            input.value(type = "text", ng-model = "$ctrl.owner.email", placeholder="E-Mail")
     div.address Address
         div
             p.header 
                 span.title  City 
-                span.value {{$ctrl.owner.location.city}}
+                input.value(type = "text", ng-model = "$ctrl.owner.location.city", placeholder="City")
         div
             p.header 
                 span.title  Street 
-                span.value {{$ctrl.owner.location.street}}
+                input.value(type = "text", ng-model = "$ctrl.owner.location.street", placeholder="Street")
         div
             p.header 
                 span.title  State 
-                span.value {{$ctrl.owner.location.state}}
+                input.value(type = "text", ng-model = "$ctrl.owner.location.state", placeholder="State")
         div
             p.header 
                 span.title  Zip 
-                span.value {{$ctrl.owner.location.zip}}
+                input.value(type = "text", ng-model = "$ctrl.owner.location.zip", placeholder="Zip")

@@ -71,7 +71,7 @@ login-pane {
 
 .loginpassword input{
     width: 160px;
-    left: 45px;
+    left: 10px;
 }
 
 .loginbutton{
@@ -92,7 +92,7 @@ login-pane {
 }
 
 .errormessage{
-    top: 260px;
+    top: 287px;
     left: 50px;
     position: absolute;
 }

@@ -6,7 +6,7 @@ body
         div.additem <br/>
             input(type = "text", ng-model = "$ctrl.item1", placeholder="...")
             a(class = "clearInput" ng-click = "$ctrl.item1=''") x 
-            div.button(ng-click = "$ctrl.addItem($ctrl.item1)") Ekle
+            div.button(ng-click = "$ctrl.addItem($ctrl.item1)") Add
         div.sumlist
             div.checkf(ng-repeat = "item in $ctrl.card.items" ng-if = "!hide || !item[1]")
                 label.checkbox-inline(ng-class = "{'hideItem': item[1]}")
@@ -16,16 +16,16 @@ body
         div.hideArchive(ng-if = "!$ctrl.card.isArchived")
             div.userinfo
             span.userSpan(ng-repeat="u in $ctrl.card.users" ) {{u}}
-            div.archivebutton(ng-click = "$ctrl.archivedCard($ctrl.card.name)") Arşivle
+            div.archivebutton(ng-click = "$ctrl.archivedCard($ctrl.card.name)") To archive
         div.adduser <br/>
             input(type = "text", ng-model = "$ctrl.user", placeholder="...")
-            div.buttonUser(ng-click = "$ctrl.addUser($ctrl.user)") Kullanıcı Ekle
+            div.buttonUser(ng-click = "$ctrl.addUser($ctrl.user)") Add User
         div.hideArchive(ng-if = "$ctrl.card.isArchived")
-            div.userinfo Kullanıcı: {{ $ctrl.owner.username }}
-            div.archivebutton(ng-click = "$ctrl.sentBackCard($ctrl.card.name)") Geri Al
+            div.userinfo User: {{ $ctrl.owner.username }}
+            div.archivebutton(ng-click = "$ctrl.sentBackCard($ctrl.card.name)") Undo
         div.hideWithCheckbox
             label.checkbox-inline
                 input(id = "fr2", type = 'checkbox', name = 'itemhide' ng-model = "hide")
-                | Seçili itemleri gösterme
+                | Don't show selected item
         
 

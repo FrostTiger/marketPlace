@@ -1,41 +1,35 @@
-.buttons{
+.buttons {
     width: 270px;
 }
-.button1  {
+.button1 {
     background: #999;
-    color:#fff;
+    color: #fff;
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
 }
-
-.buttonDelete  {
+.buttonDelete {
     background: blueviolet;
-    color:#fff;
+    color: #fff;
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
     width: 100px;
-    cursor:pointer;
+    cursor: pointer;
 }
-
 .button1:hover {
     background: #aaa;
     cursor: pointer;
 }
-
 left-menu {
     display: block;
-    position:absolute;
+    position: absolute;
     height: 100%;
     width: 280px;
-
 }
-
-left-menu h1{
+left-menu h1 {
     left: 9px;
- }   
-
+}
 left-menu p {
     background-color: darkgrey;
     padding: 20px;
@@ -49,12 +43,12 @@ left-menu p {
 left-menu p:hover {
     background-color: dimgrey;
 }
-.active{
+.active {
     background-color: darkorange;
 }
-.active:hover{
+.active:hover {
     background-color: orange;
 }
-.recycleBin{
+.recycleBin {
     background-color: orange;
 }

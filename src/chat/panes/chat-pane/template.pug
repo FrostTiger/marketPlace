@@ -1,7 +1,13 @@
 shopping-card(ng-repeat = "card in $ctrl.owner.cards" card = "card" ng-if = "$ctrl.screenType == $ctrl.screenTypes.UPTODATE && !card.isArchived")
+
 shopping-card(ng-repeat = "card in $ctrl.owner.cards" card = "card" ng-if = "$ctrl.screenType == $ctrl.screenTypes.ARCHIVE && card.isArchived")
+
 shopping-card(ng-repeat = "card in $ctrl.owner.searchResult" card = "card" ng-if = "$ctrl.screenType == $ctrl.screenTypes.SEARCH")
+
 div.buttonDelete(ng-click = "$ctrl.deleteAllCards()" ng-if="$ctrl.screenType == $ctrl.screenTypes.RECYCLEBIN") Delete All
+
 shopping-card(ng-repeat = "card in $ctrl.owner.deletedcards" card = "card" ng-if = "$ctrl.screenType == $ctrl.screenTypes.RECYCLEBIN")
+
 user-box(ng-repeat = "user in $ctrl.owner.users" user = "user" ng-if = "$ctrl.screenType == $ctrl.screenTypes.USER")
+
 price-list(ng-if = "$ctrl.screenType == $ctrl.screenTypes.PRICELIST")

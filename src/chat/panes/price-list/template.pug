@@ -1,0 +1,11 @@
+div(class='priceList')
+    div.rowHeader
+        div.columnHeader
+            span.product Product Name
+        div.columnHeader
+            span.price Price
+    div.row(ng-repeat = "product in $ctrl.owner.products" product = "product")
+        div.column 
+            span.product {{ product['name']}}
+        div.column 
+            span.price {{ product['price']}}

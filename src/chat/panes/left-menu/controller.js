@@ -29,6 +29,9 @@ module.exports = class LeftMenuController {
             CardService.bind(this.screenTypes.PROFILE, () => {
                 this.screenType = this.screenTypes.PROFILE;
             })
+            CardService.bind(this.screenTypes.PRICELIST, () => {
+                this.screenType = this.screenTypes.PRICELIST;
+            })
         });
 
     }

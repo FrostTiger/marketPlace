@@ -40,6 +40,7 @@ module.exports = class ShoppingCardController {
     }
 
     addUser(user) {
+        debugger;
         if (typeof (user) != "undefined") {
             if (typeof (this.card.users) == "undefined") {
                 this.card.users = [];

@@ -2,11 +2,11 @@ div(class='logoandname')
     img(src='/static/logo.png')
     h1 Market Place
 div(class='search')
-    input(type="text", ng-model="$ctrl.search", placeholder="Aradığınız kelimeyi buraya yazınız...")
+    input(type="text", ng-model="$ctrl.search", placeholder="Type here for search")
     img(src='/static/search.png' ng-click="$ctrl.setSearchItemScreen($ctrl.search)")
 div(class='user')
-    p Hoşgeldin,{{$ctrl.owner.username}}
-    p <a href="" ng-click="$ctrl.myProfile()" ng-if = "$ctrl.screenType != 5"> Profilim</a>
-        <a href="" ng-click="$ctrl.shoppingList()" ng-if = "$ctrl.screenType == 5"> Alışveriş Listesi</a>,<a href="" ng-click="$ctrl.logOut()"> Çıkış</a>
+    p Welcome,{{$ctrl.owner.username}}
+    p <a href="" ng-click="$ctrl.myProfile()" ng-if = "$ctrl.screenType != 5"> My profile</a>
+        <a href="" ng-click="$ctrl.shoppingList()" ng-if = "$ctrl.screenType == 5"> Shopping List</a>,<a href="" ng-click="$ctrl.logOut()"> Logout</a>
 div(class='userimg')
     img(src="{{$ctrl.owner.picture.large}}")

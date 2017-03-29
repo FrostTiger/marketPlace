@@ -159,7 +159,7 @@ label{
     position: absolute;
     top: 190px;
     height: 30px;
-    width: 140px;
+    width: 130px;
     padding: 5px;
     padding-top: 7px;
     border-bottom-left-radius: 10px;
@@ -168,14 +168,14 @@ label{
 
 .archivebutton{
     background-color: dimgrey;
-    display:block;
+    display: block;
     position: absolute;
     top: 190px;
     height: 30px;
-    width: 50px;
+    width: 70px;
     padding: 5px;
     padding-top: 7px;
-    left:140px;
+    left: 130px;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 }

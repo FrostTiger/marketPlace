@@ -5,7 +5,7 @@ profile {
     border-left: 1px solid #ccc;
     background-color: gray;
 }
-.myProfile {} .header {
+.header {
     font-size: large;
     margin: 20px;
     background-color: lightcoral;

@@ -48,6 +48,21 @@ module.exports = class ShoppingCardController {
         }
     }
 
+    totalPrice(card) {
+        var totalPrice = 0;
+        if (this.owner != undefined && this.owner.products != undefined) {
+            for (var i = 0; i < card.items.length; ++i) {
+                for (var j = 0; j < this.owner.products.length; ++j) {
+                    if (card.items[i][0] == this.owner.products[j]["name"]) {
+                        totalPrice += parseFloat(this.owner.products[j]["price"]);
+                        break;
+                    }
+                }
+            }
+        }
+        return totalPrice;
+    }
+
     searchResult(content) {
         var te = this.owner.cards;
     }

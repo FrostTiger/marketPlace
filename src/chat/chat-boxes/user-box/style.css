@@ -1,19 +1,16 @@
 user-box {
-    margin:10px;
-    display:inline-block;
+    margin: 10px;
+    display: inline-block;
     height: 300px;
     width: 200px;
     background-color: bisque;
     border-radius: 10px;
     box-shadow: 3px 3px 4px dimgrey;
 }
-
-header{
+header {
     background-color: darkgrey;
 }
-
-.userHeader
-{
+.userHeader {
     top: 10px;
     height: 35px;
     position: absolute;
@@ -24,15 +21,13 @@ header{
     border-radius: 20px;
     margin-left: 5px;
 }
-
-.image{
+.image {
     width: 150px;
     height: 150px;
     margin-top: 20px;
     margin-left: 20px;
 }
-
-header .topleft{
+header .topleft {
     top: 10px;
     height: 35px;
     position: absolute;
@@ -43,10 +38,9 @@ header .topleft{
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
 }
-
 header .topright {
     height: 35px;
-    top:10px;
+    top: 10px;
     left: 170px;
     position: absolute;
     float: right;
@@ -57,89 +51,74 @@ header .topright {
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 }
-
 header .topright:hover {
     background: #aaa;
     cursor: pointer;
 }
-
-
-form{
+form {
     top: 45px;
     position: absolute;
     text-align: left;
-    margin:5px;
+    margin: 5px;
     font-size: 12px;
     min-height: 40px;
     display: block;
 }
-
-.checkf input{
-    float:left;
+.checkf input {
+    float: left;
     margin-right: 0.4em;
 }
-
-label{
+label {
     display: inline-block;
     margin-left: 0.5em;
     margin-right: 2em;
     line-height: 1.3em;
-
 }
-
-.additem{
+.additem {
     display: inline-table;
     top: 0;
     float: left;
     height: 60px;
 }
-
-.userSpan{
+.userSpan {
     float: left;
-        margin-top: 138px;
+    margin-top: 138px;
     margin-left: 3px;
 }
-
-.adduser{
-    margin-top:230px;
+.adduser {
+    margin-top: 230px;
     height: 60px;
 }
-
-.adduser input[type="text"]{
+.adduser input[type="text"] {
     z-index: 1;
     width: 95px;
     margin-bottom: 3px;
 }
-
-.buttonUser{
+.buttonUser {
     display: inline;
     background-color: aquamarine;
     border-radius: 3px;
     padding: 5px;
-    float:right;
+    float: right;
     cursor: pointer;
 }
-
-.additem input[type="text"]{
+.additem input[type="text"] {
     z-index: 1;
     width: 140px;
     margin-bottom: 3px;
 }
-
-.button{
+.button {
     display: inline;
     margin: 5px;
     background-color: dimgrey;
     border-radius: 3px;
     padding: 5px;
 }
-
-.button:hover { 
+.button:hover {
     background: #aaa;
     cursor: pointer;
 }
-
-.sumlist{
+.sumlist {
     overflow-y: scroll;
     position: absolute;
     top: 50px;
@@ -147,15 +126,13 @@ label{
     height: 130px;
     width: 190px;
 }
-
 .hideItem {
-  text-decoration: line-through;
-  color: lightslategrey;
+    text-decoration: line-through;
+    color: lightslategrey;
 }
-
-.userinfo{
+.userinfo {
     background-color: grey;
-    display:block;
+    display: block;
     position: absolute;
     top: 190px;
     height: 30px;
@@ -165,8 +142,7 @@ label{
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
 }
-
-.archivebutton{
+.archivebutton {
     background-color: dimgrey;
     display: block;
     position: absolute;
@@ -179,41 +155,32 @@ label{
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 }
-
-.archivebutton:hover{
+.archivebutton:hover {
     background: #aaa;
     cursor: pointer;
 }
-
-form .hideWithCheckbox{
-    display:block;
+form .hideWithCheckbox {
+    display: block;
     position: absolute;
     top: 225px;
-    left:6px;
+    left: 6px;
 }
-
-.checkf label{
+.checkf label {
     width: 150px;
     margin: 3px;
-    border-bottom:1px solid dimgrey; 
+    border-bottom: 1px solid dimgrey;
 }
-
-.checkf span{
+.checkf span {
     padding: 2px;
 }
-
-.checkf span:hover{
+.checkf span:hover {
     cursor: pointer;
     background: #aaa;
 }
-
-.clearInput{
+.clearInput {
     padding: 2px;
 }
-
-.clearInput:hover{
+.clearInput:hover {
     cursor: pointer;
     background: #aaa;
 }
-
-

@@ -17,7 +17,7 @@ body
             div.userinfo
             span.userSpan(ng-repeat="u in $ctrl.card.users" ) {{u}}
             div.archivebutton(ng-click = "$ctrl.archivedCard($ctrl.card.name)") To archive
-        div.adduser <br/>
+        div.adduser(ng-if = "!$ctrl.card.isArchived") <br/>
             input(type = "text", ng-model = "$ctrl.user", placeholder="...")
             div.buttonUser(ng-click = "$ctrl.addUser($ctrl.user)") Add User
         div.hideArchive(ng-if = "$ctrl.card.isArchived")
@@ -27,5 +27,3 @@ body
             label.checkbox-inline
                 input(id = "fr2", type = 'checkbox', name = 'itemhide' ng-model = "hide")
                 | Don't show selected item
-        
-

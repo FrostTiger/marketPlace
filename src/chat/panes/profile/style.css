@@ -5,41 +5,29 @@ profile {
     border-left: 1px solid #ccc;
     background-color: gray;
 }
-
-.myProfile
-{
-    
-}
-
-.header{
+.header {
     font-size: large;
     margin: 20px;
     background-color: lightcoral;
     padding: 5px;
     border-radius: 30px;
 }
-
-.item
-{
+.item {
     font-size: medium;
 }
-
-.value
-{
+.value {
     background-color: lightgrey;
     margin-left: 10px;
     border-radius: 5px;
     font-size: larger;
 }
-
-.title{
+.title {
     font-size: larger;
     display: -webkit-inline-box;
     margin-left: 20px;
     margin-right: 20px;
 }
-
-.address{
+.address {
     margin-left: 20px;
     font-size: x-large;
 }

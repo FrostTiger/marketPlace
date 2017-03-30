@@ -12,10 +12,6 @@ class LoginService extends EventEmitter {
         this.loginScreen=item;
         this.trigger('LoginStatusChange');
     }
-
-
-
-
 }
 
 angular.module('chat-app').service('LoginService', LoginService);

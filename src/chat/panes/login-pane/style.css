@@ -8,10 +8,8 @@ login-pane {
     border-radius: 10px;
     z-index: 1;
     border: 1px solid #ccc;
-    
 }
-
-.loginimg{
+.loginimg {
     width: 400px;
     height: 120px;
     position: absolute;
@@ -19,15 +17,14 @@ login-pane {
     top: 0;
     left: 0;
 }
-.loginimg img{
+.loginimg img {
     height: 64px;
     width: 64px;
     position: absolute;
     top: 40px;
     left: 165px;
 }
-
-.logintextcontainer{
+.logintextcontainer {
     width: 300px;
     height: 120px;
     position: absolute;
@@ -37,8 +34,7 @@ login-pane {
     background-color: orange;
     border: 2px solid #ccc;
 }
-
-.loginusername{
+.loginusername {
     width: 275px;
     height: 40px;
     position: absolute;
@@ -50,13 +46,11 @@ login-pane {
     margin: 3px;
     padding: 5px;
 }
-
-.loginusername input{
+.loginusername input {
     width: 160px;
     left: 0px;
 }
-
-.loginpassword{
+.loginpassword {
     width: 275px;
     height: 40px;
     position: absolute;
@@ -68,13 +62,11 @@ login-pane {
     margin: 3px;
     padding: 5px;
 }
-
-.loginpassword input{
+.loginpassword input {
     width: 160px;
     left: 10px;
 }
-
-.loginbutton{
+.loginbutton {
     width: 92px;
     height: 40px;
     position: absolute;
@@ -85,13 +77,11 @@ login-pane {
     border: 2px solid black;
     padding: 10px;
 }
-
-.loginbutton:hover{
+.loginbutton:hover {
     background-color: orangered;
     cursor: pointer;
 }
-
-.errormessage{
+.errormessage {
     top: 287px;
     left: 50px;
     position: absolute;

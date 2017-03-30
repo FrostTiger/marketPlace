@@ -5,6 +5,7 @@ require('./panes/left-menu');
 require('./panes/mother-pane');
 require('./panes/profile');
 require('./root');
-require('./chat-boxes/shopping-card')
-require('./chat-boxes/user-box')
+require('./chat-boxes/shopping-card');
+require('./chat-boxes/user-box');
 require('./panes/login-pane');
+require('./panes/price-list');

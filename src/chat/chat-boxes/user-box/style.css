@@ -82,11 +82,11 @@ label {
 }
 .userSpan {
     float: left;
-    margin-top: 138px;
+    margin-top: 133px;
     margin-left: 3px;
 }
 .adduser {
-    margin-top: 230px;
+    margin-top: 172px;
     height: 60px;
 }
 .adduser input[type="text"] {
@@ -134,7 +134,7 @@ label {
     background-color: grey;
     display: block;
     position: absolute;
-    top: 190px;
+    top: 200px;
     height: 30px;
     width: 130px;
     padding: 5px;
@@ -146,7 +146,7 @@ label {
     background-color: dimgrey;
     display: block;
     position: absolute;
-    top: 190px;
+    top: 200px;
     height: 30px;
     width: 70px;
     padding: 5px;
@@ -162,7 +162,7 @@ label {
 form .hideWithCheckbox {
     display: block;
     position: absolute;
-    top: 225px;
+    top: 235px;
     left: 6px;
 }
 .checkf label {

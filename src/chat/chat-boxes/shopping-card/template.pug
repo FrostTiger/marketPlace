@@ -13,8 +13,11 @@ body
                     input(id = "fr", type = 'checkbox', name = 'gokhan' ng-model = "item[1]" ng-checked = "item[1]")
                     | {{item[0]}}
                 span(ng-click = "$ctrl.removeItem($index)") x
+        div.total
+            span Total
+            span.totalValue {{$ctrl.totalPrice($ctrl.card)}}
         div.hideArchive(ng-if = "!$ctrl.card.isArchived")
-            div.userinfo
+            div.carduserinfo
             span.userSpan(ng-repeat="u in $ctrl.card.users" ) {{u}}
             div.archivebutton(ng-click = "$ctrl.archivedCard($ctrl.card.name)") To archive
         div.adduser(ng-if = "!$ctrl.card.isArchived") <br/>
